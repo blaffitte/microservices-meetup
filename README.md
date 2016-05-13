@@ -1,4 +1,4 @@
-# reveal.js ![build](https://gitlab.com/pages/gitbook/badges/pages/build.svg)
+# reveal.js [](https://gitlab.com/blaffitte/test-slide//badges/pages/build.svg)
 
 A framework for easily creating beautiful presentations using HTML. [Check out the live demo](http://lab.hakim.se/reveal-js/).
 
