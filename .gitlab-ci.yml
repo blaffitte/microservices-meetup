@@ -1,0 +1,13 @@
+image: node:latest
+cache:
+  paths: 
+    - node_modules/ 
+before_script:
+  - npm install
+pages:
+  stage: deploy
+  script:
+    - grunt default
+  artifacts:
+    paths:
+      - public 
