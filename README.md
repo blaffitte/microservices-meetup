@@ -1,4 +1,4 @@
-# Slide Template in reveal.js for gitlab pages [![build status](https://gitlab.com/blaffitte/reveal-template/badges/master/build.svg)](https://gitlab.com/blaffitte/reveal-template/commits/master)
+# Slide Template in reveal.js for gitlab pages [![build status](https://gitlab.com/blaffitte/reveal-template/badges/master/build.svg)](https://gitlab.com/blaffitte/reveal-template/builds)
 
 ## reveal.js
 A framework for easily creating beautiful presentations using HTML. [Check out the live demo](http://lab.hakim.se/reveal-js/).
