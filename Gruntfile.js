@@ -113,7 +113,12 @@ module.exports = function(grunt) {
 		},
 		
 		unzip: {
-            'public': 'freveal-js-presentation.zip'
+            'long-format': {
+                   // Note: If you provide multiple src files, they will all be extracted to the same folder.
+                   // This is not well-tested behavior so use at your own risk.
+                src: 'reveal-js-presentation.zip',
+                dest: 'public'
+            }
         },
 
 		watch: {
