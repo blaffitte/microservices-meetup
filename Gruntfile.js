@@ -111,6 +111,10 @@ module.exports = function(grunt) {
 				'**.md'
 			]
 		},
+		
+		unzip: {
+            'public': 'freveal-js-presentation.zip'
+        },
 
 		watch: {
 			js: {
@@ -172,5 +176,8 @@ module.exports = function(grunt) {
 
 	// Run tests
 	grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
+	
+	// Package presentation to archive
+	grunt.registerTask( 'publish', [ 'package', 'unzip' ] );
 
 };
