@@ -9,6 +9,8 @@ pages:
   script:
     - npm install
     - grunt default
+    - mkdir public
+    - cp ./* ./public/
   artifacts:
     paths:
       - public 
