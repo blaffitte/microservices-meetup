@@ -11,7 +11,7 @@ pages:
     - npm install
     - grunt default
     - mkdir public
-    - cp -rf ./* ./public/
+    - rsync -av --progress . public --exclude public
     - ls ./public/
   artifacts:
     paths:
