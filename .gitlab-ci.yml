@@ -10,7 +10,8 @@ pages:
     - npm install
     - grunt default
     - mkdir public
-    - cp ./* ./public/
+    - cp -rf ./* ./public/
+    - ls ./public/
   artifacts:
     paths:
       - public 
