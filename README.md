@@ -1,5 +1,8 @@
-# Slide Template in reveal.js for gitlab pages [![build status](https://gitlab.com/cat-amania-niort/reveal-template/badges/master/build.svg)](https://gitlab.com/blaffitte/reveal-template/builds)
+# Slide Meet-Up MicroServices du 28/06/2016 [![build status](https://gitlab.com/cat-amania-niort/microservices-meetup/badges/master/build.svg)](https://gitlab.com/cat-amania-niort/microservices-meetup/builds)
 
+Fait en Reveal.js.
+
+Voici la documentation de reveal.js :
 ## reveal.js
 A framework for easily creating beautiful presentations using HTML. [Check out the live demo](http://lab.hakim.se/reveal-js/).
 
