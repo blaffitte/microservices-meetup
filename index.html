@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
 
 		<title>Meet-Up Architecture en &mu;Services</title>
 
@@ -51,45 +51,39 @@
                 </section>
 				
     			<section>
-    			    <h2>Qu'est-ce que l'architecture en MicroServices ?</h2>
+    			    <h3>Qu'est-ce que l'architecture en MicroServices ?</h3>
     			    
         			<section data-markdown>
             			<script type="text/template">
-                            #### Est-ce un buzzword ?
-                            
-                            OUI, mais pas que... il y a beaucoup de bonne pratique derrière ce mot. <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+                            ### Est-ce un buzzword ?
+                            OUI, mais pas que... il y a beaucoup de concepts derrière ce mot. <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
 
-                            #### Est-ce nouveau ? <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
-                            
+                            ### Est-ce nouveau ? <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
                             NON, Pour ceux qui font du SOA, c'est comme les design patterns on en fait parfois sans le savoir. <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
                             
-                            #### Est-ce du SOA ? <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
-                            
+                            ### Est-ce du SOA ? <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
                             OUI et NON, tout dépends comment on définit SOA. <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
 
                         </script>
                     </section>
         			<section data-markdown>
             			<script type="text/template">
-                            #### Mais alors, qu'est-ce que sont les &mu;Services ?
-                            
+                            ### Mais alors, qu'est-ce que sont les MicroServices ?
                             > The term "Microservice Architecture" has sprung up over the last few years to describe a particular way of designing software applications
                             > as suites of independently deployable services. 
                             > While there is no precise definition of this architectural style, there are certain common characteristics around organization around business capability, 
-                            > automated deployment, intelligence in the endpoints, and decentralized control of languages and data. <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            > automated deployment, intelligence in the endpoints, and decentralized control of languages and data. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
                             
                             Martin Fowler <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-                            
                         </script>
                     </section>
         			<section data-markdown>
             			<script type="text/template">
-                            #### En français on dit "guinche"
-                            
+                            ### En français on dit "guinche"
                             > Le terme "Architecture en Microservices" a vu le jour au cours des dernières années pour décrire une façon particulière de concevoir des applications 
                             > comme des suites de services indépendamment déployables. 
                             > Bien qu'il n'y ait pas de définition précise de ce style architectural, il y a certaines caractéristiques communes autour d'une organisation métier des services, du déploiement automatisé, 
-                            > de l'intelligence sur les endpoints, et du contrôle décentralisé des langages et des données. <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            > de l'intelligence sur les endpoints, et du contrôle décentralisé des langages et des données. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
                             
                             Martin Fowler <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             
@@ -97,19 +91,35 @@
                     </section>
         			<section data-markdown>
             			<script type="text/template">
-                            #### OK, mais concrétement ça ressemble à quoi ?
+                            ### OK, mais concrétement ça ressemble à quoi ?
 
                             ![Sample Architecture](image/shopping-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-                            ![Sample Architecture](image/mini-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="2" -->
                             
-                            [Source "Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring)
+                            [Source "Microservices with Spring"](https://spring.io/blog/2015/07/14/microservices-with-spring) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            
+                         </script>
+                    </section>
+					<section data-markdown>
+            			<script type="text/template">
+                            ### Et en détail ?
+
+                            ![Detail Architecture](image/mini-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            
+                            [Source "Microservices with Spring"](https://spring.io/blog/2015/07/14/microservices-with-spring) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            
+                         </script>
+                    </section>
+					<section data-markdown>
+            			<script type="text/template">
+                            ### Comparaison MicroService VS 3-Tiers Architecture ?
+
+                            ![MicroService VS 3-Tiers](image/micro-vs-mono.png.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             
                          </script>
                     </section>
         			<section data-markdown>
             			<script type="text/template">
-                            #### Super, mais qui fait de telles choses ?
-                            
+                            ### Super, mais qui fait de telles choses ?
                             * Netflix
                             * Uber
                             * Riot Games (League of Legends)
@@ -119,14 +129,12 @@
                     </section>
         			<section data-markdown>
             			<script type="text/template">
-                            #### Et chez les gros poissons ?
-                            
+                            ### Et chez les gros poissons ?
                             * Amazon
                             * Google
                             * Bluemix (IBM)
                             * Azure (Microsoft)
                             * etc...
-
                         </script>
                     </section>
                 </section>
@@ -135,11 +143,9 @@
         			<section data-markdown>
             			<script type="text/template">
             			    ### Qu'est-ce qui définis un &mu;Service ?
-            			    
             			    * Similaire à un composants
             			    * Isolation
             			    * Design piloté par domaine métier
-
                         </script>
                     </section>
                 </section>
@@ -165,7 +171,6 @@
             			    ### Les moins :
             			    * mise en oeuvre complexe
             			    * gouvernance obligatoire
-
                         </script>
                     </section>
                 </section>
@@ -221,6 +226,7 @@
                             * [Blog de Sam Newman](http://samnewman.io/talks/principles-of-microservices/)
                             * [Les designs patterns &mu;Service](http://blog.arungupta.me/microservice-design-patterns/)
                             * [Un tuto sympa](http://www.kennybastani.com/2015/08/polyglot-persistence-spring-cloud-docker.html)
+							* [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring)
                         </script>
                     </section>
                 </section>				
@@ -252,7 +258,6 @@
                             * Sur slack #hackathon
                             * Par mail b.laffitte@cat-amania.com
                             * Google Forms : <url à faire>
-                            
                         </script>
                     </section>
                 </section>				
@@ -261,7 +266,7 @@
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+		<script src="js/reveal.js"></script>
 
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -277,9 +282,9 @@
                 minScale: 0.2,
                 maxScale: 1.5,
                 // Parallax background image
-                parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+                parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
                 // Parallax background size
-                parallaxBackgroundSize: '2100px 900px', // CSS syntax, e.g. "2100px 900px"
+                parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
