@@ -52,6 +52,7 @@
 				
     			<section>
     			    <h2>Qu'est-ce que l'architecture en MicroServices ?</h2>
+    			    
         			<section data-markdown>
             			<script type="text/template">
                             #### Est-ce un buzzword ?
@@ -98,7 +99,11 @@
             			<script type="text/template">
                             #### OK, mais concrétement ça ressemble à quoi ?
 
-                            // TODO image archi
+                            ![Sample Architecture](image/shopping-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            ![Sample Architecture](image/mini-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            
+                            [Source "Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring)
+                            
                          </script>
                     </section>
         			<section data-markdown>
@@ -129,9 +134,11 @@
                     <h2>Les Concepts</h2>
         			<section data-markdown>
             			<script type="text/template">
-            			    * Composants
+            			    ### Qu'est-ce qui définis un &mu;Service ?
+            			    
+            			    * Similaire à un composants
             			    * Isolation
-            			    * Design par domaine métier
+            			    * Design piloté par domaine métier
 
                         </script>
                     </section>
@@ -140,10 +147,10 @@
                     <h2>Les bonnes pratiques</h2>
         			<section data-markdown>
             			<script type="text/template">
-                             // TODO
-                             * projet
-                             * continuous build / testing
-                             * continuous deploy
+                             ### Les implications de l'architecture en &mu;Service :
+                             * Analyse / Gestion de projet => Méthode agile !
+                             * Continuous build / testing => PIC Obligatoire !
+                             * Continuous deploy => DevOps fortement conseillé !
                         </script>
                     </section>
                 </section>
@@ -151,9 +158,11 @@
                     <h2>Les Plus &amp; Les Moins</h2>
         			<section data-markdown>
             			<script type="text/template">
-            			    * scaling
-            			    * evolution
+            			    ### Les plus :
+            			    * Scaling 
+            			    * Evolution
             			    
+            			    ### Les moins :
             			    * mise en oeuvre complexe
             			    * gouvernance obligatoire
 
@@ -164,30 +173,33 @@
                     <h2>Les outils préconisés</h2>
         			<section data-markdown>
             			<script type="text/template">
-            			    // project
-                            * Agile project method : Scrum 
+            			    ### Gestion de projet / Analyse
+                            * Outils de spec / doc collaboratif
+                            * Méthode Agile
                             
-                            // Continuous build, test and deploy 
+                            ### Integration Continue / Sourcing
                             * Git / github / gitlab
                             * CI / Jenkins / ...
                             
-                            // DevOps tech:
+                            ### Déploiement continue / DevOps
                             * LXC / Kubernetes 
                             * Docker / Rkt
                             * Openshift
                             * Vagrant / Puppets
                             
-                            // Code :
+                            ### APIs / Technos
                             * Netflix APIs (Java, Node, Ruby)
                             * Wildfly Swarm / Spring Cloud  (Java) 
                             * Seneca (node) 
                             
-                            // Hosting :
+                            ### Cloud / Hébergement
                             * AWS 
                             * Digital Ocean
                             * Heroku 
                             * Openshift
-                            * etc...
+                            * HyperV 
+                            * KVM
+                            * ...
                         </script>
                     </section>
                 </section>
@@ -195,8 +207,9 @@
                     <h2>Ahhhh ! la démo !</h2>
         			<section data-markdown>
             			<script type="text/template">
-                            // La démo (A. Vergnaud)
-                            
+                            ### [La démo, micro-tempo :](https://github.com/avergnaud/micro-tempo/) (A. Vergnaud)
+                            * [Spark Framework](http://sparkjava.com/)
+                            * [Netflix feign](https://github.com/Netflix/feign)
                         </script>
                     </section>
                 </section>                
