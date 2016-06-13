@@ -1,44 +1,42 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
 
-		<title>Meet-Up Architecture en &mu;Services</title>
+        <title>Meet-Up Architecture en &mu;Services</title>
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/moon.css">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/league.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-    			<section data-markdown>
-        			<script type="text/template">
-                        ## Architecture en MicroServices
-                        
-                        ### Meet Up du 28/06/2016
-                        
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown>
+                    <script type="text/template">
+                        # Architecture en MicroServices
+                        ## Meet Up du 28/06/2016 <!-- .element: style="font-size: 60px" -->
                         b.laffitte@cat-amania.com - a.vergnaud@cat-amania.com
                     </script>
                 </section>
 
-    			<section data-markdown>
-        			<script type="text/template">
+                <section data-markdown>
+                    <script type="text/template">
                         ## Sommaire
                         
-                        1. Qu'est-ce que l'architecture en &mu;Services ?
+                        1. Qu&#8217;est-ce que l&#8217;architecture en MicroServices ?
                         2. Les concepts
                         3. Les plus et les moins
                         4. Les bonnes pratiques
@@ -49,49 +47,57 @@
                         9. Questions/Réponses
                     </script>
                 </section>
-				
-    			<section>
-    			    <h3>Qu'est-ce que l'architecture en MicroServices ?</h3>
-    			    
-        			<section data-markdown>
-            			<script type="text/template">
-                            ### Est-ce un buzzword ?
-                            OUI, mais pas que... il y a beaucoup de concepts derrière ce mot. <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
-
-                            ### Est-ce nouveau ? <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
-                            NON, Pour ceux qui font du SOA, c'est comme les design patterns on en fait parfois sans le savoir. <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
-                            
-                            ### Est-ce du SOA ? <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
-                            OUI et NON, tout dépends comment on définit SOA. <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
-
+                
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Qu&#8217;est-ce que l&#8217;architecture en MicroServices ?
                         </script>
                     </section>
-        			<section data-markdown>
-            			<script type="text/template">
-                            ### Mais alors, qu'est-ce que sont les MicroServices ?
+                    <section data-markdown>
+                        <script type="text/template">
+                            #### Est-ce un buzzword ?
+                            OUI, mais pas que... il y a beaucoup de concepts derrière ce mot. <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+
+                            #### Est-ce nouveau ? <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
+                            NON, Pour ceux qui font du SOA, c&#8217;est comme les designs patterns on en fait parfois sans le savoir. <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
+                            
+                            #### Est-ce du SOA ? <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
+                            OUI et NON, tout dépends comment on définit SOA. <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
+
+                            #### L&#8217;évangile selon ? <!-- .element: class="fragment fade-up" data-fragment-index="6" -->
+                            * [Martin Fowler](http://martinfowler.com/) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
+                            * [Sam Newman](http://samnewman.io/about/) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
+                            * [Netflix Tech Blog](http://techblog.netflix.com/) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Mais alors que sont les MicroServices ?  <!-- .element: style="font-size: 60px" -->
+                            
+                            ### Définition de Martin Fowler : <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             > The term "Microservice Architecture" has sprung up over the last few years to describe a particular way of designing software applications
                             > as suites of independently deployable services. 
                             > While there is no precise definition of this architectural style, there are certain common characteristics around organization around business capability, 
                             > automated deployment, intelligence in the endpoints, and decentralized control of languages and data. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
                             
-                            Martin Fowler <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                         </script>
                     </section>
-        			<section data-markdown>
-            			<script type="text/template">
-                            ### En français on dit "guinche"
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## En français on dit "guinche"  <!-- .element: style="font-size: 60px" -->
                             > Le terme "Architecture en Microservices" a vu le jour au cours des dernières années pour décrire une façon particulière de concevoir des applications 
                             > comme des suites de services indépendamment déployables. 
-                            > Bien qu'il n'y ait pas de définition précise de ce style architectural, il y a certaines caractéristiques communes autour d'une organisation métier des services, du déploiement automatisé, 
-                            > de l'intelligence sur les endpoints, et du contrôle décentralisé des langages et des données. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
+                            > Bien qu&#8217;il n&#8217;y ait pas de définition précise de ce style architectural, il y a certaines caractéristiques communes autour d&#8217;une organisation métier des services, du déploiement automatisé, 
+                            > de l&#8217;intelligence sur les endpoints, et du contrôle décentralisé des langages et des données. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
                             
                             Martin Fowler <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             
                         </script>
                     </section>
-        			<section data-markdown>
-            			<script type="text/template">
-                            ### OK, mais concrétement ça ressemble à quoi ?
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## OK, mais concrétement ça ressemble à quoi ?  <!-- .element: style="font-size: 60px" -->
 
                             ![Sample Architecture](image/shopping-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             
@@ -99,9 +105,9 @@
                             
                          </script>
                     </section>
-					<section data-markdown>
-            			<script type="text/template">
-                            ### Et en détail ?
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Et en détail ?  <!-- .element: style="font-size: 60px" -->
 
                             ![Detail Architecture](image/mini-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             
@@ -109,17 +115,17 @@
                             
                          </script>
                     </section>
-					<section data-markdown>
-            			<script type="text/template">
-                            ### Comparaison MicroService VS 3-Tiers Architecture ?
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Comparaison MicroService VS 3-Tiers Architecture ?  <!-- .element: style="font-size: 60px" -->
 
-                            ![MicroService VS 3-Tiers](image/micro-vs-mono.png.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            ![MicroService VS 3-Tiers](image/micro-vs-mono.png) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             
                          </script>
                     </section>
-        			<section data-markdown>
-            			<script type="text/template">
-                            ### Super, mais qui fait de telles choses ?
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Super, mais qui a mis de telles choses en place ?  <!-- .element: style="font-size: 60px" -->
                             * Netflix
                             * Uber
                             * Riot Games (League of Legends)
@@ -127,9 +133,9 @@
                             * etc...
                         </script>
                     </section>
-        			<section data-markdown>
-            			<script type="text/template">
-                            ### Et chez les gros poissons ?
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Et chez les gros poissons ?  <!-- .element: style="font-size: 60px" -->
                             * Amazon
                             * Google
                             * Bluemix (IBM)
@@ -140,78 +146,125 @@
                 </section>
                 <section>
                     <h2>Les Concepts</h2>
-        			<section data-markdown>
-            			<script type="text/template">
-            			    ### Qu'est-ce qui définis un &mu;Service ?
-            			    * Similaire à un composants
-            			    * Isolation
-            			    * Design piloté par domaine métier
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Qu&#8217;est-ce qui définis un MicroService ?
+                            * Son design est pilot&eacute; par son domaine m&eacute;tier
+                            * Il posséde les données de son domaine
+                            * Il est autonome et isolé
+                            * Il est tolérent à la panne
+                            * Il est similaire &agrave; un composants
                         </script>
                     </section>
                 </section>
                 <section>
                     <h2>Les bonnes pratiques</h2>
-        			<section data-markdown>
-            			<script type="text/template">
-                             ### Les implications de l'architecture en &mu;Service :
-                             * Analyse / Gestion de projet => Méthode agile !
-                             * Continuous build / testing => PIC Obligatoire !
-                             * Continuous deploy => DevOps fortement conseillé !
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### L&#8217;architecture en MicroService implique :
+
+                            > Une façon d&#8217;architecturer une application
+                            
+                            Jacques II de Chabannes, seigneur de La Palice <!-- .element: style="font-size: 15px" class="fragment fade-down" data-fragment-index="1" -->
+                            
+                            ### Mais aussi : <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            * Une façon de gérer les projets et les équipes <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
+                            * Une façon de développer <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
+                            * Une façon de livrer <!-- .element: class="fragment fade-down" data-fragment-index="5" -->
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Gérer les projets et les équipes <!-- .element: style="font-size: 60px" -->
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Développer un microservice <!-- .element: style="font-size: 60px" -->
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Livrer un microservice <!-- .element: style="font-size: 60px" -->
+
                         </script>
                     </section>
                 </section>
                 <section>
                     <h2>Les Plus &amp; Les Moins</h2>
-        			<section data-markdown>
-            			<script type="text/template">
-            			    ### Les plus :
-            			    * Scaling 
-            			    * Evolution
-            			    
-            			    ### Les moins :
-            			    * mise en oeuvre complexe
-            			    * gouvernance obligatoire
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Les moins
+                            
+                            * Mise en oeuvre complexe
+                            * Gouvernance obligatoire
+                            * Demande une maturité sur le métier
+                            
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Les plus
+                            
+                            * Scaling
+                            * Cycle Evolution court
+                            * Maîtrise du métier par domaine
+                            
                         </script>
                     </section>
                 </section>
                 <section>
                     <h2>Les outils préconisés</h2>
-        			<section data-markdown>
-            			<script type="text/template">
-            			    ### Gestion de projet / Analyse
-                            * Outils de spec / doc collaboratif
-                            * Méthode Agile
-                            
-                            ### Integration Continue / Sourcing
-                            * Git / github / gitlab
-                            * CI / Jenkins / ...
-                            
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Gestion de projet / Analyse
+                            * Méthode Agile comme Scrum ([IceScrum](https://www.icescrum.com/) - [IceScrum OSS](https://github.com/icescrum/iceScrum))
+                            * Wiki / GitBook / JIRA / etc...
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Sourcing / Intégration Continue
+                            * Git / GitHub / GitLab / ...
+                            * Jenkins / Travis CI / GitLab CI / ...
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
                             ### Déploiement continue / DevOps
-                            * LXC / Kubernetes 
-                            * Docker / Rkt
-                            * Openshift
-                            * Vagrant / Puppets
-                            
+                            * VirtualBox / KVM / VMWare (VM bas niveaux)
+                            * Vagrant / Puppets (VM builder)
+                            * LXC / Kubernetes (Conteneur bas niveaux)
+                            * Docker / Rkt (Conteneur builder)
+                            * Openshift (Cartouche)
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
                             ### APIs / Technos
                             * Netflix APIs (Java, Node, Ruby)
                             * Wildfly Swarm / Spring Cloud  (Java) 
                             * Seneca (node) 
-                            
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
                             ### Cloud / Hébergement
                             * AWS 
                             * Digital Ocean
                             * Heroku 
                             * Openshift
-                            * HyperV 
-                            * KVM
                             * ...
                         </script>
                     </section>
                 </section>
                 <section>
-                    <h2>Ahhhh ! la démo !</h2>
-        			<section data-markdown>
-            			<script type="text/template">
+                    <h2>Ahhhh, la démo !</h2>
+                    <section data-markdown>
+                        <script type="text/template">
                             ### [La démo, micro-tempo :](https://github.com/avergnaud/micro-tempo/) (A. Vergnaud)
                             * [Spark Framework](http://sparkjava.com/)
                             * [Netflix feign](https://github.com/Netflix/feign)
@@ -220,37 +273,37 @@
                 </section>                
                 <section>
                     <h2>Quelques liens...</h2>
-        			<section data-markdown>
-            			<script type="text/template">
+                    <section data-markdown>
+                        <script type="text/template">
                             * [Blog de Martin Fowler](http://martinfowler.com/articles/microservices.html)
                             * [Blog de Sam Newman](http://samnewman.io/talks/principles-of-microservices/)
                             * [Les designs patterns &mu;Service](http://blog.arungupta.me/microservice-design-patterns/)
                             * [Un tuto sympa](http://www.kennybastani.com/2015/08/polyglot-persistence-spring-cloud-docker.html)
-							* [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring)
+                            * [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring)
                         </script>
                     </section>
-                </section>				
+                </section>              
                 <section>
                     <h2>Et la suite !?</h2>
-        			<section data-markdown>
-            			<script type="text/template">
+                    <section data-markdown>
+                        <script type="text/template">
                             #  Questions ?
                         </script>
                     </section>
-        			<section data-markdown>
-            			<script type="text/template">
+                    <section data-markdown>
+                        <script type="text/template">
                             #  Hackathon Time !!!
                             
                             3 rounds pour le Hackathon &mu;Service :
                             
-                            * Round 0 : L'inscription ça commence maintenant !
-                            * Round 1 : Définition d'une application et découpage en domaine (collectif)
+                            * Round 0 : L&#8217;inscription ça commence maintenant !
+                            * Round 1 : Définition d&#8217;une application et découpage en domaine (collectif)
                             * Round 2 : Constitution des équipes et définition des API de chaque domaine (collectif / par équipe)
                             * Round 3 : Hackathon (par équipe)
                         </script>
                     </section>
                     <section data-markdown>
-            			<script type="text/template">
+                        <script type="text/template">
                             #  Hackathon Time !!!
                             
                             Inscriptions &amp; Contacts :
@@ -260,18 +313,18 @@
                             * Google Forms : <url à faire>
                         </script>
                     </section>
-                </section>				
+                </section>              
   
-			</div>
-		</div>
+            </div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
                 width: 1024,
                 height: 768,
             
@@ -285,14 +338,14 @@
                 parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
                 // Parallax background size
                 parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
 </html>
