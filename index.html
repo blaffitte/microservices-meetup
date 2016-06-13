@@ -149,13 +149,45 @@
                     <section data-markdown>
                         <script type="text/template">
                             ### Qu&#8217;est-ce qui définis un MicroService ?
-                            * Son design est pilot&eacute; par son domaine m&eacute;tier
-                            * Il posséde les données de son domaine
-                            * Il est autonome et isolé
-                            * Il est tolérent à la panne
-                            * Il est similaire &agrave; un composants
+                            * Son design est pilot&eacute; par son domaine m&eacute;tier pas par une techno.
+                            * Il posséde les données de son domaine.
+                            * Il est autonome et isolé.
+                            * Il est tolérent à la panne.
+                            * Il est similaire &agrave; un composants.
+                            * Il est outillé pour automatiser toutes les manipulations superflues.
                         </script>
                     </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Design Pilot&eacute; par le Domaine m&eacute;tier (DPD ou DDD : Domain Driven Design)
+                            * Il posséde les données de son domaine.
+                            
+                        </script>
+                    </section>                  
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Autonomie &amp; Isolation
+                        </script>
+                    </section>                  
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Failsafe : la tolérance à la panne
+                        </script>
+                    </section>                  
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Le coté "composant"
+                            
+                            Un peu comme dans un client lourd il doit être (dans la mesure du possible) réutilisable.
+                            Mais ce n&#8217;est pas tout il peut être aussi interchangeable !
+                        </script>
+                    </section>                  
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### L&#8217;Outillage 
+                            C&#8217;est un mal nécessaire pour l&#8217;avenir.
+                        </script>
+                    </section>                  
                 </section>
                 <section>
                     <h2>Les bonnes pratiques</h2>
@@ -177,19 +209,41 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Gérer les projets et les équipes <!-- .element: style="font-size: 60px" -->
+                            
+                            Les équipes et les projets de &mu;Service sont elles aussi micro.
+                            
+                            Chaque équipe est responsable d'un &mu;Service de bout en bout. De la MOA à la production.
+                            Une équipe type :
+                            * Un fonctionnel (Analyste / testeur)
+                            * Un Scrum Master / gestionnaire de conf
+                            * Un Développeur / Intégrateur
+                            * Un DevOps / Intégrateur / Prod
 
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
                             ## Développer un microservice <!-- .element: style="font-size: 60px" -->
-
+                            
+                            On fait la part belle au bon usage :
+                            * Intégration continue
+                            * TU en Test First
+                            * Revue de code / de pair
+                            * Prise en compte du failover
+                            * Versionning et Compatibilité des APIs (SemVer)
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
                             ## Livrer un microservice <!-- .element: style="font-size: 60px" -->
-
+                            
+                            Une partie du travail d&#8217;intégration est pris en charge dès le début du projet via la mise en place de :
+                            * VM avec Vagrant ou Puppets
+                            * Conteneur avec Docker ou Rkt
+                            
+                            Cette mise en place doit être accompagnée d&#8217;un processus de livraison automatisée.
+                            Le développeur travaille donc de concert avec l&#8217;intégrateur/DevOps.
+                            Il ne livre plus une archive mais une VM ou un conteneur qu&#8217;il aura testé en Dev, RE7 Interne, RE7 Utilisateur, RE7 d&#8217;exploitation.
                         </script>
                     </section>
                 </section>
@@ -200,7 +254,8 @@
                             ### Les moins
                             
                             * Mise en oeuvre complexe
-                            * Gouvernance obligatoire
+                            * Outillage important
+                            * Gouvernance forte obligatoire
                             * Demande une maturité sur le métier
                             
                         </script>
@@ -209,9 +264,11 @@
                         <script type="text/template">
                             ### Les plus
                             
-                            * Scaling
+                            * Scaling par service suivant le besoin
                             * Cycle Evolution court
                             * Maîtrise du métier par domaine
+                            * Fiabilisation des livrables
+                            * On utilise toujours la meilleur techno possible pour un domaine donné.
                             
                         </script>
                     </section>
