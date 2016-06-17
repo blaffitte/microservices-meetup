@@ -35,19 +35,18 @@
                 <section data-markdown>
                     <script type="text/template">
                         ## Sommaire
-                        
+
                         1. Qu&#8217;est-ce que l&#8217;architecture en MicroServices ?
                         2. Les concepts
-                        3. Les plus et les moins
-                        4. Les bonnes pratiques
-                        5. Les impacts sur les projets
-                        6. Les outils préconisés
-                        7. La démo (A. Vergnaud)
-                        8. Quelques liens...
-                        9. Questions/Réponses
+                        3. Les bonnes pratiques
+                        4. Les plus et les moins
+                        5. Les outils préconisés
+                        6. La démo (A. Vergnaud)
+                        7. Quelques liens...
+                        8. Questions/Réponses
                     </script>
                 </section>
-                
+
                 <section>
                     <section data-markdown>
                         <script type="text/template">
@@ -61,7 +60,10 @@
 
                             #### Est-ce nouveau ? <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
                             NON, Pour ceux qui font du SOA, c&#8217;est comme les designs patterns on en fait parfois sans le savoir. <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
-                            
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
                             #### Est-ce du SOA ? <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
                             OUI et NON, tout dépends comment on définit SOA. <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
 
@@ -74,54 +76,26 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Mais alors que sont les MicroServices ?  <!-- .element: style="font-size: 60px" -->
-                            
+
                             ### Définition de Martin Fowler : <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             > The term "Microservice Architecture" has sprung up over the last few years to describe a particular way of designing software applications
-                            > as suites of independently deployable services. 
-                            > While there is no precise definition of this architectural style, there are certain common characteristics around organization around business capability, 
+                            > as suites of independently deployable services.
+                            > While there is no precise definition of this architectural style, there are certain common characteristics around organization around business capability,
                             > automated deployment, intelligence in the endpoints, and decentralized control of languages and data. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
-                            
+
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
                             ## En français on dit "guinche"  <!-- .element: style="font-size: 60px" -->
-                            > Le terme "Architecture en Microservices" a vu le jour au cours des dernières années pour décrire une façon particulière de concevoir des applications 
-                            > comme des suites de services indépendamment déployables. 
-                            > Bien qu&#8217;il n&#8217;y ait pas de définition précise de ce style architectural, il y a certaines caractéristiques communes autour d&#8217;une organisation métier des services, du déploiement automatisé, 
+                            > Le terme "Architecture en Microservices" a vu le jour au cours des dernières années pour décrire une façon particulière de concevoir des applications
+                            > comme des suites de services indépendamment déployables.
+                            > Bien qu&#8217;il n&#8217;y ait pas de définition précise de ce style architectural, il y a certaines caractéristiques communes autour d&#8217;une organisation métier des services, du déploiement automatisé,
                             > de l&#8217;intelligence sur les endpoints, et du contrôle décentralisé des langages et des données. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
-                            
+
                             Martin Fowler <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-                            
+
                         </script>
-                    </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## OK, mais concrétement ça ressemble à quoi ?  <!-- .element: style="font-size: 60px" -->
-
-                            ![Sample Architecture](image/shopping-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-                            
-                            [Source "Microservices with Spring"](https://spring.io/blog/2015/07/14/microservices-with-spring) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-                            
-                         </script>
-                    </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## Et en détail ?  <!-- .element: style="font-size: 60px" -->
-
-                            ![Detail Architecture](image/mini-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-                            
-                            [Source "Microservices with Spring"](https://spring.io/blog/2015/07/14/microservices-with-spring) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-                            
-                         </script>
-                    </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## Comparaison MicroService VS 3-Tiers Architecture ?  <!-- .element: style="font-size: 60px" -->
-
-                            ![MicroService VS 3-Tiers](image/micro-vs-mono.png) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-                            
-                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
@@ -130,6 +104,7 @@
                             * Uber
                             * Riot Games (League of Legends)
                             * AirBnB
+                            * Soundcloud
                             * etc...
                         </script>
                     </section>
@@ -137,9 +112,11 @@
                         <script type="text/template">
                             ## Et chez les gros poissons ?  <!-- .element: style="font-size: 60px" -->
                             * Amazon
+                            * eBay
                             * Google
                             * Bluemix (IBM)
                             * Azure (Microsoft)
+                            * Openshift (Red Hat)
                             * etc...
                         </script>
                     </section>
@@ -148,46 +125,132 @@
                     <h2>Les Concepts</h2>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Qu&#8217;est-ce qui définis un MicroService ?
-                            * Son design est pilot&eacute; par son domaine m&eacute;tier pas par une techno.
-                            * Il posséde les données de son domaine.
-                            * Il est autonome et isolé.
-                            * Il est tolérent à la panne.
-                            * Il est similaire &agrave; un composants.
-                            * Il est outillé pour automatiser toutes les manipulations superflues.
+                            ## Qu&#8217;est-ce qui définis un MicroService ? <!-- .element: style="font-size: 60px" -->
+                            * Son design
+                            * Ses données
+                            * Son isolation et son autonomie
+                            * Sa tolérence à la panne
+                            * Assimilable à un composants.
+                            * Son outillage et sa techno.
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Design Pilot&eacute; par le Domaine m&eacute;tier (DPD ou DDD : Domain Driven Design)
-                            * Il posséde les données de son domaine.
-                            
-                        </script>
-                    </section>                  
+                            ## Design Pilot&eacute; par le Domaine m&eacute;tier (DPD ou DDD : Domain Driven Design) <!-- .element: style="font-size: 60px" -->
+
+                            Un &mu;Service ne s&#8217;occupe que d&#8217;un domaine métier et d&#8217;un seul.
+
+                            Exemple :
+                            > Un service gérant des contrats ne s&#8217;occupe que des contrats et non des adhérents au contrat.
+                            > c&#8217;est un autre service lui même différent de celui qui gère les sociétaires
+                       </script>
+                    </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Autonomie &amp; Isolation
+                            ## La gestion des données : changer ses habitudes <!-- .element: style="font-size: 60px" -->
+
+                            * Finis les grosses base relationnelles (ou presque)
+                            * La part belle aux bases aux bases NoSQL ou relationnelles objet.
+                            * Repenser la transaction pour s&#8217;en passer
+                            * Accepter de ne pas avoir des données valides et savoir les gérer.
+
+                            #### Les données sont privées !!!
+
                         </script>
-                    </section>                  
+                    </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Failsafe : la tolérance à la panne
+                            ## Autonomie &amp; Isolation <!-- .element: style="font-size: 60px" -->
+
+                            * Il ne dépends pas d&#8217;autres services pour être déployé.
+                            * Ses données sont privées et accessible uniquement depuis l&#8217;API
+                            * Les montées de version doivent être possible à tout moment
+                            * Il doit pouvoir être distribué différement des autres services
+
                         </script>
-                    </section>                  
+                    </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Le coté "composant"
-                            
-                            Un peu comme dans un client lourd il doit être (dans la mesure du possible) réutilisable.
-                            Mais ce n&#8217;est pas tout il peut être aussi interchangeable !
+                            ## Failsafe : la tolérance à la panne <!-- .element: style="font-size: 60px" -->
+
+                            Le service User tombe... l&#8217;application Gestion des Contrats tombe !
+
+                            En &mu;service il ne faut pas que la perte d&#8217;un service bloque le comportement de l&#8217;application.
+
+                            Solutions possible :
+                            * 1 Cluster par service
+                            * Rédeploiement automatique fiable et rapide
+                            * Système de compensation dans l&#8217;application (do and post later)
+                            * etc...
+
                         </script>
-                    </section>                  
+                    </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ### L&#8217;Outillage 
+                            ## Le coté "composant" <!-- .element: style="font-size: 60px" -->
+
+                            Un peu comme dans un client lourd il doit être (dans la mesure du possible) :
+                            * Réutilisable
+                            * Mais aussi interchangeable
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## L&#8217;Outillage <!-- .element: style="font-size: 60px" -->
+
                             C&#8217;est un mal nécessaire pour l&#8217;avenir.
+
+                            #### Les outils de construction doivent être les mêmes que ceux de production.
+
+                            > le livrable doit être une image ISO production au delta du clustering
+
+                            #### Il faut identifier les outils nécessaire au plus tôt dans la conception du service.
+
+                            > plus on anticipe les travaux de production, plus simple sera l&#8217;exploitation du service
+
                         </script>
-                    </section>                  
+                    </section>
+                   <section data-markdown>
+                        <script type="text/template">
+                            ## La techno <!-- .element: style="font-size: 60px" -->
+
+                            #### Il n&#8217;en à pas une mais des technos !
+
+                            > Il faut utiliser la meilleure techno pour le METIER géré.
+
+                            > Une bonne techno est la techno qui sert le mieux son besoin !
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Assez de théorie : Application en MicroService <!-- .element: style="font-size: 60px" -->
+
+                            ![Sample Architecture](image/shopping-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+
+                            [Source "Microservices with Spring"](https://spring.io/blog/2015/07/14/microservices-with-spring) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+
+                         </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Dissection de la grenouille !  <!-- .element: style="font-size: 60px" -->
+
+                            ![Detail Architecture](image/mini-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+
+                            [Source "Microservices with Spring"](https://spring.io/blog/2015/07/14/microservices-with-spring) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+
+                         </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Comparaison MicroService VS 3-Tiers Architecture ?  <!-- .element: style="font-size: 60px" -->
+
+                            ![MicroService VS 3-Tiers](image/micro-vs-mono.png) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+
+                         </script>
+                    </section>
                 </section>
                 <section>
                     <h2>Les bonnes pratiques</h2>
@@ -196,9 +259,9 @@
                             ### L&#8217;architecture en MicroService implique :
 
                             > Une façon d&#8217;architecturer une application
-                            
-                            Jacques II de Chabannes, seigneur de La Palice <!-- .element: style="font-size: 15px" class="fragment fade-down" data-fragment-index="1" -->
-                            
+
+                            Jacques II de Chabannes, seigneur de La Palice <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
+
                             ### Mais aussi : <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
                             * Une façon de gérer les projets et les équipes <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
                             * Une façon de développer <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
@@ -209,9 +272,9 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Gérer les projets et les équipes <!-- .element: style="font-size: 60px" -->
-                            
+
                             Les équipes et les projets de &mu;Service sont elles aussi micro.
-                            
+
                             Chaque équipe est responsable d'un &mu;Service de bout en bout. De la MOA à la production.
                             Une équipe type :
                             * Un fonctionnel (Analyste / testeur)
@@ -224,7 +287,7 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Développer un microservice <!-- .element: style="font-size: 60px" -->
-                            
+
                             On fait la part belle au bon usage :
                             * Intégration continue
                             * TU en Test First
@@ -236,11 +299,11 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Livrer un microservice <!-- .element: style="font-size: 60px" -->
-                            
+
                             Une partie du travail d&#8217;intégration est pris en charge dès le début du projet via la mise en place de :
                             * VM avec Vagrant ou Puppets
                             * Conteneur avec Docker ou Rkt
-                            
+
                             Cette mise en place doit être accompagnée d&#8217;un processus de livraison automatisée.
                             Le développeur travaille donc de concert avec l&#8217;intégrateur/DevOps.
                             Il ne livre plus une archive mais une VM ou un conteneur qu&#8217;il aura testé en Dev, RE7 Interne, RE7 Utilisateur, RE7 d&#8217;exploitation.
@@ -252,24 +315,24 @@
                     <section data-markdown>
                         <script type="text/template">
                             ### Les moins
-                            
+
                             * Mise en oeuvre complexe
                             * Outillage important
                             * Gouvernance forte obligatoire
                             * Demande une maturité sur le métier
-                            
+
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
                             ### Les plus
-                            
+
                             * Scaling par service suivant le besoin
                             * Cycle Evolution court
                             * Maîtrise du métier par domaine
                             * Fiabilisation des livrables
                             * On utilise toujours la meilleur techno possible pour un domaine donné.
-                            
+
                         </script>
                     </section>
                 </section>
@@ -303,16 +366,16 @@
                         <script type="text/template">
                             ### APIs / Technos
                             * Netflix APIs (Java, Node, Ruby)
-                            * Wildfly Swarm / Spring Cloud  (Java) 
-                            * Seneca (node) 
+                            * Wildfly Swarm / Spring Cloud  (Java)
+                            * Seneca (node)
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
                             ### Cloud / Hébergement
-                            * AWS 
+                            * AWS
                             * Digital Ocean
-                            * Heroku 
+                            * Heroku
                             * Openshift
                             * ...
                         </script>
@@ -327,7 +390,7 @@
                             * [Netflix feign](https://github.com/Netflix/feign)
                         </script>
                     </section>
-                </section>                
+                </section>
                 <section>
                     <h2>Quelques liens...</h2>
                     <section data-markdown>
@@ -339,39 +402,39 @@
                             * [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring)
                         </script>
                     </section>
-                </section>              
+                </section>
                 <section>
                     <h2>Et la suite !?</h2>
+                    <section data-markdown>
+                        <script type="text/template">
+                            #  Hackathon Time !!!
+
+                            3 rounds pour le Hackathon &mu;Service : <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            * Round 0 : L&#8217;inscription ça commence maintenant ! <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            * Round 1 : Définition d&#8217;une application et découpage en domaine (collectif) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
+                            * Round 2 : Constitution des équipes et définition des API de chaque domaine (collectif / par équipe) <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
+                            * Round 3 : Hackathon (par équipe) <!-- .element: class="fragment fade-down" data-fragment-index="5" -->
+
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            #  Hackathon Time !!!
+
+                            Inscriptions &amp; Contacts :
+
+                            * Sur slack #hackathon
+                            * Par mail b.laffitte@cat-amania.com
+                            * Google Forms : http://goo.gl/forms/ZcnjSkaB1gcsOLRB3
+                        </script>
+                    </section>
                     <section data-markdown>
                         <script type="text/template">
                             #  Questions ?
                         </script>
                     </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            #  Hackathon Time !!!
-                            
-                            3 rounds pour le Hackathon &mu;Service :
-                            
-                            * Round 0 : L&#8217;inscription ça commence maintenant !
-                            * Round 1 : Définition d&#8217;une application et découpage en domaine (collectif)
-                            * Round 2 : Constitution des équipes et définition des API de chaque domaine (collectif / par équipe)
-                            * Round 3 : Hackathon (par équipe)
-                        </script>
-                    </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            #  Hackathon Time !!!
-                            
-                            Inscriptions &amp; Contacts :
-                            
-                            * Sur slack #hackathon
-                            * Par mail b.laffitte@cat-amania.com
-                            * Google Forms : <url à faire>
-                        </script>
-                    </section>
-                </section>              
-  
+                </section>
+
             </div>
         </div>
 
@@ -384,10 +447,10 @@
                 history: true,
                 width: 1024,
                 height: 768,
-            
+
                 // Factor of the display size that should remain empty around the content
                 margin: 0.1,
-            
+
                 // Bounds for smallest/largest possible scale to apply to content
                 minScale: 0.2,
                 maxScale: 1.5,
