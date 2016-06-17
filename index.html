@@ -48,9 +48,15 @@
                 </section>
 
                 <section>
+                    <h2>Définition</h2>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Qu&#8217;est-ce que l&#8217;architecture en MicroServices ?
+                            ## Qu&#8217;est-ce que l&#8217;architecture en MicroServices ? <!-- .element: style="font-size: 60px" -->
+                            
+                            Réponse : Plein de petits services ! <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+                            ![Symbol &mu;Service](image/symbol-microservices.png) <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+                            
+                            Euh Non, c&#8217;est un peu plus complexe que ça...  <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
                         </script>
                     </section>
                     <section data-markdown>
@@ -65,13 +71,14 @@
                     <section data-markdown>
                         <script type="text/template">
                             #### Est-ce du SOA ?
-                            OUI et NON, tout dépends comment on définit SOA. <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
+                            OUI et NON, tout dépends comment on définit SOA. <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
 
-                            #### L&#8217;évangile selon ? <!-- .element: class="fragment fade-up" data-fragment-index="6" -->
-                            * [Martin Fowler](http://martinfowler.com/aboutMe.html) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
-                            * [James Lewis](http://www.bovon.org/about) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
-                            * [Sam Newman](http://samnewman.io/about/) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
-                            * [Netflix Tech Blog](http://techblog.netflix.com/) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
+                            #### L&#8217;évangile selon ? <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
+
+                            [![Martin Fowler](image/martin-fowler.jpg)](http://martinfowler.com/aboutMe.html) <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
+                            [![James Lewis](image/james-lewis.jpg)](http://www.bovon.org/about) <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
+                            [![Sam Newman](image/sam-newman.jpg)](http://samnewman.io/about/) <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
+                            
                         </script>
                     </section>
                     <section data-markdown>
@@ -99,24 +106,25 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Super, mais qui a mis de telles choses en place ?  <!-- .element: style="font-size: 60px" -->
-                            * Netflix
-                            * Uber
-                            * Riot Games (League of Legends)
-                            * AirBnB
-                            * Soundcloud
-                            * etc...
+                            ![Netflix](image/netflix.png) <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+                            ![Uber](image/uber.png) <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
+                            ![Riot Game](image/riot.png) <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
+                            ![AirBnB](image/airbnb.jpg) <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
+                            ![SoundCloud](image/soundcloud.jpg) <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
+                            
+                            ### Et d&#8217;autres... <!-- .element: class="fragment fade-up" data-fragment-index="6" -->
+                          
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
                             ## Et chez les gros poissons ?  <!-- .element: style="font-size: 60px" -->
-                            * Amazon
-                            * eBay
-                            * Google
-                            * Bluemix (IBM)
-                            * Azure (Microsoft)
-                            * Openshift (Red Hat)
-                            * etc...
+                            ![Amazon Web Service](image/aws.png) <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+                            ![eBay](image/ebay.png) <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
+                            ![Google Cloud Plateform](image/google.png) <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
+                            ![IBM Bluemix](image/bluemix.jpg) <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
+                            ![Microsoft Azure](image/azure.png) <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
+                            ![RedHat OpenShift](image/openshift.png) <!-- .element: class="fragment fade-up" data-fragment-index="6" -->
                         </script>
                     </section>
                 </section>
@@ -371,7 +379,7 @@
                         <script type="text/template">
                             ### APIs / Technos
                             * Netflix APIs (Java, Node, Ruby)
-                            * Wildfly Swarm / Spring Cloud  (Java)
+                            * Wildfly Swarm / Spring Boot  (Java)
                             * Seneca (node)
                         </script>
                     </section>
@@ -400,10 +408,9 @@
                     <h2>Quelques liens...</h2>
                     <section data-markdown>
                         <script type="text/template">
-                            * [Blog de Martin Fowler](http://martinfowler.com/articles/microservices.html)
-                            * [Blog de Sam Newman](http://samnewman.io/talks/principles-of-microservices/)
                             * [Les designs patterns &mu;Service](http://blog.arungupta.me/microservice-design-patterns/)
-                            * [Un tuto sympa](http://www.kennybastani.com/2015/08/polyglot-persistence-spring-cloud-docker.html)
+                            * [Un tuto Sympa Spring](http://www.kennybastani.com/2015/08/polyglot-persistence-spring-cloud-docker.html)
+                            * [Netflix Tech Blog](http://techblog.netflix.com/)
                             * [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring)
                         </script>
                     </section>
@@ -452,7 +459,7 @@
                 history: true,
                 width: 1024,
                 height: 768,
-				transition: 'convex',
+                transition: 'convex',
 
                 // Factor of the display size that should remain empty around the content
                 margin: 0.1,
