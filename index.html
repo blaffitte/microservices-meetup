@@ -64,11 +64,12 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            #### Est-ce du SOA ? <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
+                            #### Est-ce du SOA ?
                             OUI et NON, tout dépends comment on définit SOA. <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
 
                             #### L&#8217;évangile selon ? <!-- .element: class="fragment fade-up" data-fragment-index="6" -->
-                            * [Martin Fowler](http://martinfowler.com/) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
+                            * [Martin Fowler](http://martinfowler.com/aboutMe.html) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
+                            * [James Lewis](http://www.bovon.org/about) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
                             * [Sam Newman](http://samnewman.io/about/) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
                             * [Netflix Tech Blog](http://techblog.netflix.com/) <!-- .element: class="fragment fade-up" data-fragment-index="7" -->
                         </script>
@@ -90,6 +91,7 @@
                             > En bref, le style architectural de Microservice est une approche de conception d&#8217;une application comme une suite de petits services, chacun fonctionnant dans son propre processus et communiquant avec des mécanismes légers, souvent une API REST sur HTTP.
                             > Ces services sont construits autour de domaine métier et sont indépendamment déployable par usines de déploiement entièrement automatisé.
                             > Il y a un minimum de gestion centralisée de ces services, ces derniers peuvent être écrits dans différents langages de programmation et peuvent utiliser différentes technologies de stockage de données. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
+                            
                             James Lewis and Martin Fowler <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
 
                         </script>
@@ -202,6 +204,12 @@
 
                             > le livrable doit être une image ISO production au delta du clustering
 
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## L&#8217;Outillage <!-- .element: style="font-size: 60px" -->
+
                             #### Il faut identifier les outils nécessaire au plus tôt dans la conception du service.
 
                             > plus on anticipe les travaux de production, plus simple sera l&#8217;exploitation du service
@@ -216,26 +224,26 @@
 
                             > Il faut utiliser la meilleure techno pour le METIER géré.
 
-                            > Une bonne techno est la techno qui sert le mieux son besoin !
+                            #### Une bonne techno est la techno qui sert le mieux son besoin !
 
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Assez de théorie : Application en MicroService <!-- .element: style="font-size: 60px" -->
+                            ## Assez de théorie : Application en MicroService <!-- .element: style="font-size: 55px" -->
 
                             ![Sample Architecture](image/shopping-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-
+                            
                             [Source "Microservices with Spring"](https://spring.io/blog/2015/07/14/microservices-with-spring) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
 
                          </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Dissection de la grenouille !  <!-- .element: style="font-size: 60px" -->
+                            ## Dissection de la grenouille !  <!-- .element: style="font-size: 55px" -->
 
                             ![Detail Architecture](image/mini-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-
+                            
                             [Source "Microservices with Spring"](https://spring.io/blog/2015/07/14/microservices-with-spring) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
 
                          </script>
@@ -444,6 +452,7 @@
                 history: true,
                 width: 1024,
                 height: 768,
+				transition: 'convex',
 
                 // Factor of the display size that should remain empty around the content
                 margin: 0.1,
