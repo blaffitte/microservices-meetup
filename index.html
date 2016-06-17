@@ -24,12 +24,19 @@
     <body>
         <div class="reveal">
             <div class="slides">
-                <section data-markdown>
-                    <script type="text/template">
-                        # Architecture en MicroServices
-                        ## Meet Up du 28/06/2016 <!-- .element: style="font-size: 60px" -->
-                        b.laffitte@cat-amania.com - a.vergnaud@cat-amania.com
-                    </script>
+                <section>
+                    <h1>Architecture en MicroServices</h1>
+                    <table style="border: none;text-align: center" cellspacing="0" cellpadding="0">
+                        <tr style="border: none;text-align: center">
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="1"><img src="image/benoit.laffitte.jpg" /></span></td>
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="2"><img src="image/adrien.vergnaud.jpg" /></span></td>
+                        </tr>
+                        <tr style="border: none;text-align: center">
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="1">Benoit Laffitte</span></td>
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="2">Adrien Vergnaud</span></td>
+                        </tr>
+                    </table>
+                    <h2 style="font-size: 60px">Meet Up du 28/06/2016 </h2>
                 </section>
 
                 <section data-markdown>
@@ -85,7 +92,7 @@
                         <script type="text/template">
                             ## Mais alors que sont les MicroServices ?  <!-- .element: style="font-size: 60px" -->
 
-                            ### Définition de James Lewis and Martin Fowler : <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            #### Définition de James Lewis and Martin Fowler : <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             > In short, the microservice architectural style is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API.
                             > These services are built around business capabilities and independently deployable by fully automated deployment machinery.
                             > There is a bare minimum of centralized management of these services, which may be written in different programming languages and use different data storage technologies. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
@@ -99,7 +106,7 @@
                             > Ces services sont construits autour de domaine métier et sont indépendamment déployable par usines de déploiement entièrement automatisé.
                             > Il y a un minimum de gestion centralisée de ces services, ces derniers peuvent être écrits dans différents langages de programmation et peuvent utiliser différentes technologies de stockage de données. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
                             
-                            James Lewis and Martin Fowler <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            James Lewis / Martin Fowler <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
 
                         </script>
                     </section>
@@ -398,10 +405,27 @@
                     <h2>Ahhhh, la démo !</h2>
                     <section data-markdown>
                         <script type="text/template">
-                            ### [La démo, micro-tempo :](https://github.com/avergnaud/micro-tempo/) (A. Vergnaud)
-                            * [Sparkjava](http://sparkjava.com/)
-                            * [Netflix feign](https://github.com/Netflix/feign)
+                            ![A. Vergnaud](image/adrien.vergnaud.jpg)
+                            ### [La démo: micro-tempo](https://github.com/avergnaud/micro-tempo/)
+                            ![Sparkjava](image/sparkjava.png)
+                            ![Netflix feign](image/netflix-oss.png)
                         </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Sparkjava 
+                            [![Sparkjava](image/sparkjava.png)](http://sparkjava.com/)
+                             // TODO présentation
+                            
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Netflix feign
+                            [![Netflix feign](image/netflix-oss.png)](https://github.com/Netflix/feign)
+                             // TODO présentation
+
+                         </script>
                     </section>
                 </section>
                 <section>
