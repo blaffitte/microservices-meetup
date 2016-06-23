@@ -59,10 +59,10 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Qu&#8217;est-ce que l&#8217;architecture en MicroServices ? <!-- .element: style="font-size: 60px" -->
-                            
+
                             Réponse : Plein de petits services ! <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
                             ![Symbol &mu;Service](image/symbol-microservices.png) <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
-                            
+
                             Euh Non, c&#8217;est un peu plus complexe que ça...  <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
                         </script>
                     </section>
@@ -85,7 +85,7 @@
                             [![Martin Fowler](image/martin-fowler.jpg)](http://martinfowler.com/aboutMe.html) <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
                             [![James Lewis](image/james-lewis.jpg)](http://www.bovon.org/about) <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
                             [![Sam Newman](image/sam-newman.jpg)](http://samnewman.io/about/) <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
-                            
+
                         </script>
                     </section>
                     <section data-markdown>
@@ -105,7 +105,7 @@
                             > En bref, le style architectural de Microservice est une approche de conception d&#8217;une application comme une suite de petits services, chacun fonctionnant dans son propre processus et communiquant avec des mécanismes légers, souvent une API REST sur HTTP.
                             > Ces services sont construits autour de domaine métier et sont indépendamment déployable par usines de déploiement entièrement automatisé.
                             > Il y a un minimum de gestion centralisée de ces services, ces derniers peuvent être écrits dans différents langages de programmation et peuvent utiliser différentes technologies de stockage de données. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
-                            
+
                             James Lewis / Martin Fowler <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
 
                         </script>
@@ -118,9 +118,9 @@
                             ![Riot Game](image/riot.png) <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
                             ![AirBnB](image/airbnb.jpg) <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
                             ![SoundCloud](image/soundcloud.jpg) <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
-                            
+
                             ### Et d&#8217;autres... <!-- .element: class="fragment fade-up" data-fragment-index="6" -->
-                          
+
                         </script>
                     </section>
                     <section data-markdown>
@@ -139,7 +139,7 @@
                     <h2>Les Concepts</h2>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Qu&#8217;est-ce qui définis un MicroService ? <!-- .element: style="font-size: 60px" -->
+                            ## Qu&#8217;est-ce qui définit un MicroService ? <!-- .element: style="font-size: 60px" -->
                             * Son design
                             * Ses données
                             * Son isolation et son autonomie
@@ -150,7 +150,8 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Design Pilot&eacute; par le Domaine m&eacute;tier (DPD ou DDD : Domain Driven Design) <!-- .element: style="font-size: 60px" -->
+                            ## Design Pilot&eacute; par le Domaine m&eacute;tier <!-- .element: style="font-size: 60px" -->
+                            (DPD ou DDD : Domain Driven Design)
 
                             Un &mu;Service ne s&#8217;occupe que d&#8217;un domaine métier et d&#8217;un seul.
 
@@ -163,7 +164,7 @@
                         <script type="text/template">
                             ## La gestion des données : changer ses habitudes <!-- .element: style="font-size: 60px" -->
 
-                            * Finis les grosses base relationnelles (ou presque)
+                            * Fini les grosses base relationnelles (ou presque)
                             * La part belle aux bases aux bases NoSQL ou relationnelles objet.
                             * Repenser la transaction pour s&#8217;en passer
                             * Accepter de ne pas avoir des données valides et savoir les gérer.
@@ -176,9 +177,9 @@
                         <script type="text/template">
                             ## Autonomie &amp; Isolation <!-- .element: style="font-size: 60px" -->
 
-                            * Il ne dépends pas d&#8217;autres services pour être déployé.
-                            * Ses données sont privées et accessible uniquement depuis l&#8217;API
-                            * Les montées de version doivent être possible à tout moment
+                            * Il ne dépend pas d&#8217;autres services pour être déployé.
+                            * Ses données sont privées et accessibles uniquement depuis l&#8217;API
+                            * Les montées de version doivent être possibles à tout moment
                             * Il doit pouvoir être distribué différement des autres services
 
                         </script>
@@ -187,7 +188,7 @@
                         <script type="text/template">
                             ## Failsafe : la tolérance à la panne <!-- .element: style="font-size: 60px" -->
 
-                            Le service User tombe... l&#8217;application Gestion des Contrats tombe !
+                            Le service ```User``` tombe... l&#8217;application Gestion des Contrats tombe !
 
                             En &mu;service il ne faut pas que la perte d&#8217;un service bloque le comportement de l&#8217;application.
 
@@ -248,7 +249,7 @@
                             ## Assez de théorie : Application en MicroService <!-- .element: style="font-size: 55px" -->
 
                             ![Sample Architecture](image/shopping-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-                            
+
                             [Source "Microservices with Spring"](https://spring.io/blog/2015/07/14/microservices-with-spring) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
 
                          </script>
@@ -258,7 +259,7 @@
                             ## Dissection de la grenouille !  <!-- .element: style="font-size: 55px" -->
 
                             ![Detail Architecture](image/mini-system.jpg)<!-- .element: class="fragment fade-down" data-fragment-index="1" -->
-                            
+
                             [Source "Microservices with Spring"](https://spring.io/blog/2015/07/14/microservices-with-spring) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
 
                          </script>
@@ -413,18 +414,26 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Sparkjava 
+                            ### Sparkjava
                             [![Sparkjava](image/sparkjava.png)](http://sparkjava.com/)
-                             // TODO présentation
-                            
+
+                            Pour créer un service web
+                            ```java
+                            get("/hello", (req, res) -> "Hello World");
+                            ```
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
                             ### Netflix feign
                             [![Netflix feign](image/netflix-oss.png)](https://github.com/Netflix/feign)
-                             // TODO présentation
 
+                            Pour consommer un service web
+                            ```java
+                            service = Feign.builder().decoder(new JAXBDecoder(jaxbFactory))
+                                           .target(WorklogsService.class,
+                                                   "http://jira.svc.cat-amania.com/plugins/servlet/");
+                            ```
                          </script>
                     </section>
                 </section>
