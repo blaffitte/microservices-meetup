@@ -101,7 +101,8 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## En français on dit "guinche"  <!-- .element: style="font-size: 60px" -->
+                            ## "En français on dit guinche"  <!-- .element: style="font-size: 60px" -->
+                            (I'AM - je danse le MIA) <!-- .element: style="font-size: 15px" -->
                             > En bref, le style architectural de Microservice est une approche de conception d&#8217;une application comme une suite de petits services, chacun fonctionnant dans son propre processus et communiquant avec des mécanismes légers, souvent une API REST sur HTTP.
                             > Ces services sont construits autour de domaine métier et sont indépendamment déployable par usines de déploiement entièrement automatisé.
                             > Il y a un minimum de gestion centralisée de ces services, ces derniers peuvent être écrits dans différents langages de programmation et peuvent utiliser différentes technologies de stockage de données. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
@@ -319,15 +320,39 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Livrer un microservice <!-- .element: style="font-size: 60px" -->
+                            ### Livrer un microservice (1/3) <!-- .element: style="font-size: 40px" -->
 
-                            Une partie du travail d&#8217;intégration est pris en charge dès le début du projet via la mise en place de :
-                            * VM avec Vagrant ou Puppets
-                            * Conteneur avec Docker ou Rkt
+                            Une partie du travail d&#8217;intégration est pris en charge dès le début du projet
+							via la mise en place de VM : <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            ![Vagrant](image/vagrant.png) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            ![Puppets](image/puppets.png) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+
+                            et/ou de Conteneur : <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
+                            ![Docker](image/docker.png) <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
+                            ![Rkt](image/rkt.png) <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Livrer un microservice  (2/3) <!-- .element: style="font-size: 40px" -->
 
                             Cette mise en place doit être accompagnée d&#8217;un processus de livraison automatisée.
-                            Le développeur travaille donc de concert avec l&#8217;intégrateur/DevOps.
-                            Il ne livre plus une archive mais une VM ou un conteneur qu&#8217;il aura testé en Dev, RE7 Interne, RE7 Utilisateur, RE7 d&#8217;exploitation.
+
+                            Le développeur travaille donc de concert avec l&#8217;intégrateur
+							
+							### Le DevOps est grandement préconisé.
+                        </script>
+                    </section>
+                   <section data-markdown>
+                        <script type="text/template">
+                            ### Livrer un microservice  (3/3) <!-- .element: style="font-size: 40px" -->
+
+                            On ne livre plus une archive mais une VM ou un Conteneur testé en
+                            * Dev,
+                            * RE7 Interne,
+                            * RE7 Utilisateur,
+                            * RE7 d&#8217;exploitation
+                            * ...
                         </script>
                     </section>
                 </section>
@@ -348,8 +373,9 @@
                         <script type="text/template">
                             ### Les plus
 
+                            * Simplifie le multicanal (Mobile, Desktop, Web, ...)
                             * Scaling par service suivant le besoin
-                            * Cycle Evolution court
+                            * Cycle Evolution court par domaine
                             * Maîtrise du métier par domaine
                             * Fiabilisation des livrables
                             * On utilise toujours la meilleur techno possible pour un domaine donné.
@@ -361,26 +387,52 @@
                     <h2>Les outils préconisés</h2>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Gestion de projet / Analyse
-                            * Méthode Agile comme Scrum ([IceScrum](https://www.icescrum.com/) - [IceScrum OSS](https://github.com/icescrum/iceScrum))
-                            * Wiki / GitBook / JIRA / etc...
+                            ### Gestion de projet / Analyse / Documentation
+
+                            Méthode Agile comme Scrum :
+
+                            ![[IceScrum](https://www.icescrum.com/)](image/iceScrum.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+
+                            Documentation collaborative :
+
+                            ![XWiki](image/wiki.png) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            ![GitBook](image/gitbook.png) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
+                            ![JIRA](image/jira.png) <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
+
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Sourcing / Intégration Continue
-                            * Git / GitHub / GitLab / ...
-                            * Jenkins / Travis CI / GitLab CI / ...
+                            ### Sourcing
+                            ![Git](image/git.png) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            ![GitHub](image/github.png) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            ![GitLab](image/gitlab.png) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
+                            ### Intégration Continue
+                            ![Jenkins](image/jenkins.png) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            ![Travis CI](image/travis-ci.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            ![GitLab](image/gitlab-ci.png) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Déploiement continue / DevOps
-                            * VirtualBox / KVM / VMWare (VM bas niveaux)
-                            * Vagrant / Puppets (VM builder)
-                            * LXC / Kubernetes (Conteneur bas niveaux)
-                            * Docker / Rkt (Conteneur builder)
-                            * Openshift (Cartouche)
+                            Virtualisation <!-- .element: style="font-size: 25px" -->
+
+                            ![VirtualBox](image/virtualbox.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            ![KVM](image/kvm.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            ![VMWare](image/vmware.png) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
+
+                            Conteneur <!-- .element: style="font-size: 25px" -->
+
+                            ![LXC](image/lxc.png) <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
+                            ![Kubernetes](image/kubernetes.png) <!-- .element: class="fragment fade-down" data-fragment-index="5" -->
+
+                            Déploiment continue / DevOps <!-- .element: style="font-size: 25px" -->
+
+                            ![Vagrant](image/vagrant.png) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            ![Puppets](image/puppets.png) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            ![Docker](image/docker.png) <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
+                            ![Rkt](image/rkt.png) <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
+                            ![Openshift](image/openshift-80.png) <!-- .element: class="fragment fade-down" data-fragment-index="5" -->
                         </script>
                     </section>
                     <section data-markdown>
