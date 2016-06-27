@@ -84,17 +84,20 @@
                     <section >
                         <h4>Est-ce du SOA ?</h4>
                         <span class="fragment fade-up" data-fragment-index="1">OUI et NON, tout dépend comment on définit SOA.</span>
-                        <h4 class="fragment fade-up" data-fragment-index="2">L&#8217;évangile selon ?</h4>
+                        <img src="image/soa-vs-microservice.png" class="fragment fade-down" data-fragment-index="2" />
+                      </section>
+                      <section >
+                        <h4>L&#8217;évangile selon ?</h4>
                         <table style="border: none;text-align: center" cellspacing="0" cellpadding="0" class="fragment fade-up" data-fragment-index="2">
                         <tr style="border: none;text-align: center">
-                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="3"><a href="http://martinfowler.com/aboutMe.html" target="_blank" ><img src="image/martin-fowler.jpg" /></a></span></td>
-                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="4"><a href="http://www.bovon.org/about"  target="_blank"><img src="image/james-lewis.jpg" /></a></span></td>
-                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="5"><a href="http://samnewman.io/about/"  target="_blank"><img src="image/sam-newman.jpg" /></a></span></td>
+                            <td style="border: none;text-align: center"><span class="fragment fade-down" data-fragment-index="3"><a href="http://martinfowler.com/aboutMe.html" target="_blank" ><img src="image/martin-fowler.jpg" /></a></span></td>
+                            <td style="border: none;text-align: center"><span class="fragment fade-down" data-fragment-index="4"><a href="http://www.bovon.org/about"  target="_blank"><img src="image/james-lewis.jpg" /></a></span></td>
+                            <td style="border: none;text-align: center"><span class="fragment fade-down" data-fragment-index="5"><a href="http://samnewman.io/about/"  target="_blank"><img src="image/sam-newman.jpg" /></a></span></td>
                         </tr>
                         <tr style="border: none;text-align: center">
-                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="3">Martin Fowler</span></td>
-                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="4">James Lewis</span></td>
-                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="5">Sam Newman</span></td>
+                            <td style="border: none;text-align: center"><span class="fragment fade-up" data-fragment-index="3">Martin Fowler</span></td>
+                            <td style="border: none;text-align: center"><span class="fragment fade-up" data-fragment-index="4">James Lewis</span></td>
+                            <td style="border: none;text-align: center"><span class="fragment fade-up" data-fragment-index="5">Sam Newman</span></td>
                         </tr>
                     </table>
                     </section>
@@ -102,33 +105,42 @@
                         <script type="text/template">
                             ## Mais alors que sont les MicroServices ?  <!-- .element: style="font-size: 60px" -->
 
-                            #### Définition de James Lewis and Martin Fowler : <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            Définition de James Lewis et Martin Fowler : <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             > In short, the microservice architectural style is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API.
                             > These services are built around business capabilities and independently deployable by fully automated deployment machinery.
                             > There is a bare minimum of centralized management of these services, which may be written in different programming languages and use different data storage technologies. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
 
                         </script>
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-background-color="#000" data-background-image="image/iam.jpg" data-background-size="contain">
                         <script type="text/template">
                             ## "En français on dit guinche"  <!-- .element: style="font-size: 60px" -->
                             (I'AM - je danse le MIA) <!-- .element: style="font-size: 15px" -->
-                            > En bref, le style architectural de Microservice est une approche de conception d&#8217;une application comme une suite de petits services, chacun fonctionnant dans son propre processus et communiquant avec des mécanismes légers, souvent une API REST sur HTTP.
-                            > Ces services sont construits autour de domaine métier et sont indépendamment déployable par usines de déploiement entièrement automatisées.
-                            > Il y a un minimum de gestion centralisée de ces services, ces derniers peuvent être écrits dans différents langages de programmation et peuvent utiliser différentes technologies de stockage de données. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
+                            > En bref, le style architectural en Microservice est une approche définissant une application comme une suite de petits services, chacun fonctionnant dans son propre processus et communiquant avec des mécanismes légers, souvent une API REST sur HTTP.
+                            > Ces services sont construits autour d'un domaine métier et sont indépendamments déployables par une usine de déploiement entièrement automatisée.
+                            > Il n'y a qu'un minimum de gestion centralisée de ces services, qui peuvent être écrits dans différents langages de programmation et peuvent utiliser différentes technologies de stockage de données. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
 
                             James Lewis / Martin Fowler <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
 
                         </script>
                     </section>
-                   <section data-markdown>
+                    <section data-markdown>
+                        <script type="text/template">
+                            #### Mais alors, SOA... ou pas !?
+                            Les deux sont des collections de services.
+
+                            Mais la différence est dans mise en oeuvre. <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+                            * Le SOA intégre plusieurs applications pour offrir une collection de services.<!-- .element: class="fragment fade-up" data-fragment-index="2" -->
+                            * L'architecture microservice structure une application à travers une collection de services. <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
+                        </script>
+                    </section>
+                   <section data-markdown data-background-image="image/bg-om.jpg">
                         <script type="text/template">
                            ## Aller l'OM ! <!-- .element: style="font-size: 60px" -->
 
                            ![OM](image/droit-au-but.jpg)
 
-                           Les microservices vont droit au but :
-
+                           #### Les microservices vont droit au but
                            * On répond à une problématique métier à la fois
                            * On adresse le besoin présent
                            * On gére la montée en charge finement
@@ -255,7 +267,6 @@
                         <script type="text/template">
                             ## Le coté "composant" (1/2) <!-- .element: style="font-size: 60px" -->
 
-                            Un peu comme un composant graphique, il doit être :
                             * Réutilisable
                             * Rétro-compatible
                             * Mais aussi interchangeable
@@ -265,31 +276,39 @@
                         <script type="text/template">
                             ## Le coté "composant" (2/2) <!-- .element: style="font-size: 60px" -->
 
-                            Plus on respecte les standards du web à la lettre, plus le service sera flexible et interchangeable :
+                            Respect des standards du Web (Be the Web !)
                             * HTTP / REST
                             * HATEOAS (Hypermedia)
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## L&#8217;Outillage (1/2)<!-- .element: style="font-size: 60px" -->
+                            ## L&#8217;Outillage (1/3)<!-- .element: style="font-size: 60px" -->
 
-                            C&#8217;est un mal nécessaire pour l&#8217;avenir.
+                            C&#8217;est un investissement nécessaire pour l&#8217;avenir.
 
                             #### Les outils de construction doivent être les mêmes que ceux de déploiement.
 
-                            > Le livrable doit être iso-production
+                            > Une seule et même chaine de construction pour que le livrable soit iso-production du Dev à l'Exploit.
 
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## L&#8217;Outillage (2/2)<!-- .element: style="font-size: 60px" -->
+                            ## L&#8217;Outillage (2/3)<!-- .element: style="font-size: 60px" -->
 
-                            #### Il faut identifier les outils nécessaires au plus tôt dans la conception du service.
+                            #### Il faut identifier les outils d'exploit au plus tôt dans la conception du service.
 
                             > Plus on anticipe les travaux de production, plus simple sera l&#8217;exploitation du service
 
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## L&#8217;Outillage (3/3)<!-- .element: style="font-size: 60px" -->
+                            Continuous Delivry / DevOps : La clef du succés !
+
+                            ![Continuous Delivery](image/continous-delivery.png)
                         </script>
                     </section>
                    <section data-markdown>
@@ -298,9 +317,9 @@
 
                             ### Il n&#8217;y en à pas une, mais des technos !
 
-                            > Il faut utiliser la meilleure techno pour le BESOIN géré.
+                            > Il faut utiliser la meilleure techno pour le BESOIN adressé.
 
-                            ### Une bonne techno est la techno qui sert le mieux son besoin !
+                            > Il est plus simple d'enfoncer un clou avec un marteau plutôt qu'un tournevis
 
                         </script>
                     </section>
@@ -308,13 +327,16 @@
                         <script type="text/template">
                             ## La techno (2/2)<!-- .element: style="font-size: 60px" -->
 
-                            ### Les couches de communication doivent être basées sur des standards
+                            #### Les couches de communication doivent être basées sur des standards
 
-                            REST est préconisé, mais ne doit pas fermer la porte à SOAP.
+                            REST est préconisé. Mais il doit pouvoir avoir plusieurs formes.
+                            * XML, JSON, YaML
+                            * ...
 
                             > On peut exposer un même service sous plusieurs formes.
 
-                            L&#8217;important est d&#8217;être dans les standards.
+                            > C'est le ```Smart Endpoint```
+
                         </script>
                     </section>
                     <section data-markdown>
@@ -350,7 +372,7 @@
                     <h2>Les bonnes pratiques</h2>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Getting Start
+                            ### Getting Start (1/2)
 
                             Une première approche est de partir d&#8217;un monolith et d&#8217;en faire des microservices.
 
@@ -359,7 +381,14 @@
                             Pas sans une maturité sur ce style d&#8217;architecture ET le métier.
                         </script>
                     </section>
-                     <section data-markdown>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Getting Start  (2/2)
+
+                            ![MicroService VS SOA](image/approche-microservices.jpg)
+                         </script>
+                    </section>
+                    <section data-markdown>
                         <script type="text/template">
                             ### L&#8217;architecture en MicroService implique :
 
@@ -453,14 +482,14 @@
 
                             Le développeur travaille donc de concert avec l&#8217;intégrateur
 
-                            ### Le DevOps est préconisé.
+                            ### Le Continuous Delivery est préconisé.
                         </script>
                     </section>
                    <section data-markdown>
                         <script type="text/template">
                             ### Livrer un microservice  (3/3) <!-- .element: style="font-size: 40px" -->
 
-                            On ne livre plus une archive mais une VM ou un Conteneur testé en
+                            On ne livre plus une archive mais une VM ou un Conteneur testé automatiquement en :
                             * Dev,
                             * RE7 Interne,
                             * RE7 Utilisateur,
@@ -529,6 +558,16 @@
                             ### Intégration Continue
                             ![Jenkins](image/jenkins.png) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             ![Travis CI](image/travis-ci.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            ![GitLab](image/gitlab-ci.png) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Continuous Delivry
+                            ![GoCD](image/go_logo.png) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            ![Strider](image/strider-cd.png) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
+                            ![Jenkins](image/jenkins.png) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
+                            ![Travis CI](image/travis-ci.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
                             ![GitLab](image/gitlab-ci.png) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
                         </script>
                     </section>
@@ -625,11 +664,12 @@
                     <h2>Quelques liens...</h2>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Articles et tutos
+                            ### Articles, Tutos, Blogs
                             * [Les designs patterns microservice](http://blog.arungupta.me/microservice-design-patterns/)
                             * [Un tuto Sympa Spring](http://www.kennybastani.com/2015/08/polyglot-persistence-spring-cloud-docker.html)
                             * [Netflix Tech Blog](http://techblog.netflix.com/)
                             * [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring)
+                            * [Continuous Delivery: Introduction to concepts and tools](https://technologyconversations.com/2014/04/29/continuous-delivery-introduction-to-concepts-and-tools/)
                         </script>
                     </section>
                     <section data-markdown>
