@@ -75,18 +75,23 @@
                             NON, Pour ceux qui font du SOA, c&#8217;est comme les designs patterns on en fait parfois sans le savoir. <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
                         </script>
                     </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            #### Est-ce du SOA ?
-                            OUI et NON, tout dépends comment on définit SOA. <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+                    <section >
+                        <h4>Est-ce du SOA ?</h4>
+                        <span class="fragment fade-up" data-fragment-index="1">OUI et NON, tout dépends comment on définit SOA.</span>
+                        <h4 class="fragment fade-up" data-fragment-index="2">L&#8217;évangile selon ?</h4>
+                        <table style="border: none;text-align: center" cellspacing="0" cellpadding="0" class="fragment fade-up" data-fragment-index="2">
+                        <tr style="border: none;text-align: center">
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="3"><a href="http://martinfowler.com/aboutMe.html" target="_blank" ><img src="image/martin-fowler.jpg" /></a></span></td>
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="4"><a href="http://www.bovon.org/about"  target="_blank"><img src="image/james-lewis.jpg" /></a></span></td>
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="5"><a href="http://samnewman.io/about/"  target="_blank"><img src="image/sam-newman.jpg" /></a></span></td>
+                        </tr>
+                        <tr style="border: none;text-align: center">
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="3">Martin Fowler</span></td>
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="4">James Lewis</span></td>
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="5">Sam Newman</span></td>
+                        </tr>
+                    </table>
 
-                            #### L&#8217;évangile selon ? <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
-
-                            [![Martin Fowler](image/martin-fowler.jpg)](http://martinfowler.com/aboutMe.html) <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
-                            [![James Lewis](image/james-lewis.jpg)](http://www.bovon.org/about) <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
-                            [![Sam Newman](image/sam-newman.jpg)](http://samnewman.io/about/) <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
-
-                        </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
@@ -119,9 +124,7 @@
                             ![Riot Game](image/riot.png) <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
                             ![AirBnB](image/airbnb.jpg) <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
                             ![SoundCloud](image/soundcloud.jpg) <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
-
-                            ### Et d&#8217;autres... <!-- .element: class="fragment fade-up" data-fragment-index="6" -->
-
+                            ### Et d&#8217;autres... <!-- .element: style="font-size: 40px" class="fragment fade-up" data-fragment-index="6" -->
                         </script>
                     </section>
                     <section data-markdown>
@@ -143,23 +146,25 @@
                             ## Qu&#8217;est-ce qui définit un MicroService ? <!-- .element: style="font-size: 60px" -->
                             * Son design
                             * Ses données
-                            * Son isolation et son autonomie
+                            * Son isolation 
+                            * Son autonomie
                             * Sa tolérence à la panne
-                            * Assimilable à un composants.
-                            * Son outillage et sa techno.
+                            * Assimilable à un composants
+                            * Son outillage, sa techno
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
                             ## Design Pilot&eacute; par le Domaine m&eacute;tier <!-- .element: style="font-size: 60px" -->
-                            (Approche DDD : Domain Driven Design)
 
                             Un &mu;Service ne s&#8217;occupe que d&#8217;un domaine métier et d&#8217;un seul.
+
                             Les fonctionnels autour du service doivent-être des spécialistes du domaine.
 
                             > Un service gérant des contrats ne s&#8217;occupe que des contrats.
                             > Pas des adhérents lié au contrat. C&#8217;est un autre service qui s'en occupera.
 
+                            Approche DDD (Domain Driven Design) conseillée.
                        </script>
                     </section>
                     <section data-markdown>
@@ -168,12 +173,11 @@
 
                             * Fini les grosses base relationnelles (ou presque).
                             * La part belle aux bases aux bases NoSQL.
-                            * Repenser la transaction pour s&#8217;en passer le plus possible.
-                            * Accepter de ne pas avoir des données valides et savoir les gérer.
+                            * Repenser la transaction pour s&#8217;en passer (le plus possible).
 
                             #### Les données sont privées !!!
 
-                            LSes données sont privées et accessibles uniquement depuis l&#8217;API exposée
+                            Elles appartiennent au service et sont accessibles uniquement depuis l&#8217;API exposée.
                         </script>
                     </section>
                     <section data-markdown>
@@ -181,8 +185,8 @@
                             ## Autonomie &amp; Isolation <!-- .element: style="font-size: 60px" -->
 
                             * Il ne dépend pas d&#8217;autres services pour être déployé.
-                            * Les montées de version doivent être possibles à tout moment
-                            * Il doit pouvoir être distribué différement des autres services
+                            * Les montées de version doivent être possibles à tout moment.
+                            * Il doit pouvoir être mis à l&#8217;échelle différement des autres services
 
                         </script>
                     </section>
@@ -256,6 +260,19 @@
 
                         </script>
                     </section>
+                   <section data-markdown>
+                        <script type="text/template">
+                            ## La techno <!-- .element: style="font-size: 60px" -->
+
+                            #### Les couches de communication doivent êtres baser sur des standards
+
+                            REST est préconisé, mais ne doit pas fermer la porte à SOAP.
+                            
+                            > On peut exposé un même service sous plusieures formes.
+                            
+                            L&#8217;important est d&#8217;être dans les standards.
+                        </script>
+                    </section>
                     <section data-markdown>
                         <script type="text/template">
                             ## Assez de théorie : Application en MicroService <!-- .element: style="font-size: 55px" -->
@@ -289,6 +306,16 @@
                     <h2>Les bonnes pratiques</h2>
                     <section data-markdown>
                         <script type="text/template">
+                            ### Getting Start...
+                            
+                            Une première approche est de partir d&#8217;un monolith et d&#8217;en faire des microservices.
+                            
+                            Partir directement en microservice n&#8217;est pas conseiller, pas sans une maturité sur ce style d&#8217;architecture.
+                            
+                        </script>
+                    </section>
+                     <section data-markdown>
+                        <script type="text/template">
                             ### L&#8217;architecture en MicroService implique :
 
                             > Une façon d&#8217;architecturer une application
@@ -308,12 +335,12 @@
 
                             Les équipes et les projets de &mu;Service sont elles aussi micro.
 
-                            Chaque équipe est responsable d'un &mu;Service de bout en bout. De la MOA à la production.
+                            Chaque équipe est responsable d&#8217;un &mu;Service de bout en bout. De la MOA à la production.
                             Une équipe type :
-                            * Un fonctionnel (Analyste / testeur)
-                            * Un Scrum Master / gestionnaire de conf
-                            * Un Développeur / Intégrateur
-                            * Un DevOps / Intégrateur / Prod
+                            * Un fonctionnel Spécialiste du domaine
+                            * Un Scrum Master
+                            * Un Développeur full-stack ou des développeurs front/back
+                            * Un DevOps
 
                         </script>
                     </section>
@@ -322,8 +349,9 @@
                             ## Développer un microservice <!-- .element: style="font-size: 60px" -->
 
                             On fait la part belle au bon usage :
-                            * Intégration continue
+                            * Itération "courte"
                             * TU en Test First
+                            * Intégration continue
                             * Revue de code / de pair
                             * Prise en compte du failover
                             * Versionning et Compatibilité des APIs (SemVer)
@@ -351,7 +379,7 @@
 
                             Le développeur travaille donc de concert avec l&#8217;intégrateur
 
-                            ### Le DevOps est grandement préconisé.
+                            ### Le DevOps est préconisé.
                         </script>
                     </section>
                    <section data-markdown>
@@ -363,7 +391,7 @@
                             * RE7 Interne,
                             * RE7 Utilisateur,
                             * RE7 d&#8217;exploitation
-                            * ...
+                           
                         </script>
                     </section>
                 </section>
@@ -374,9 +402,11 @@
                             ### Les moins
 
                             * Mise en oeuvre complexe
-                            * Outillage important
-                            * Gouvernance forte obligatoire
+                            * Outillage important (build/test/monitoring)
+                            * Gouvernance forte (mais décentralisée)
                             * Demande une maturité sur le métier
+                            * Peut démultiplier les compétences
+                            * Pas de norme existante
 
                         </script>
                     </section>
@@ -385,11 +415,12 @@
                             ### Les plus
 
                             * Simplifie le multicanal (Mobile, Desktop, Web, ...)
-                            * Scaling par service suivant le besoin
-                            * Cycle Evolution court par domaine
+                            * Flexible et évolutif dans le temps
+                            * "Time to Market" réduit
                             * Maîtrise du métier par domaine
                             * Fiabilisation des livrables
-                            * On utilise toujours la meilleur techno possible pour un domaine donné.
+                            * Mise à l&#8217;échelle fine.
+                            * On utilise toujours la meilleur techno possible pour un problème donné.
 
                         </script>
                     </section>
@@ -402,7 +433,7 @@
 
                             Méthode Agile comme Scrum :
 
-                            ![[IceScrum](https://www.icescrum.com/)](image/iceScrum.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            [![IceScrum](image/iceScrum.jpg)](https://www.icescrum.com/) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
 
                             Documentation collaborative :
 
@@ -514,6 +545,11 @@
                     <section data-markdown>
                         <script type="text/template">
                             ### Youtube
+                            * [Principles Of Microservices by Sam Newman](https://youtu.be/PFQnNFe27kU?list=PLbPMIlZ-9A46C497Bj0NQluBxsRQ5EIyZ)
+                            * [James Lewis - Microservices: Adaptive Systems for Innovative Organizations](https://youtu.be/GDVcUM5wbxU?list=PLbPMIlZ-9A46C497Bj0NQluBxsRQ5EIyZ)
+                            * [Microservices - Martin Fowler](https://youtu.be/wgdBVIX9ifA?list=PLbPMIlZ-9A46C497Bj0NQluBxsRQ5EIyZ)
+                            
+                            [Playlist autour des Microservices](https://www.youtube.com/playlist?list=PLbPMIlZ-9A46C497Bj0NQluBxsRQ5EIyZ)
                         </script>
                     </section>
                     <section data-markdown>
