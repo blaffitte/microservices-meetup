@@ -171,11 +171,14 @@
                         <script type="text/template">
                             ## La gestion des données : changer ses habitudes <!-- .element: style="font-size: 60px" -->
 
-                            * Fini les grosses base relationnelles (ou presque).
+                            * Fini les grosses bases relationnelles (ou presque).
                             * La part belle aux bases aux bases NoSQL.
                             * Repenser la transaction pour s&#8217;en passer (le plus possible).
-
-                            #### Les données sont privées !!!
+                       </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Les données sont privées !!! <!-- .element: style="font-size: 60px" -->
 
                             Elles appartiennent au service et sont accessibles uniquement depuis l&#8217;API exposée.
                         </script>
@@ -194,11 +197,10 @@
                         <script type="text/template">
                             ## Failsafe : la tolérance à la panne <!-- .element: style="font-size: 60px" -->
 
-                            Le service ```User``` tombe... l&#8217;application Gestion des Contrats tombe !
+                            > Le service ```User``` tombe... l&#8217;application Gestion des Contrats tombe !
 
                             En &mu;service il ne faut pas que la perte d&#8217;un service bloque le comportement de l&#8217;application.
 
-                            Solutions possible :
                             * 1 Cluster par service
                             * Rédeploiement automatique fiable et rapide
                             * Système de compensation dans l&#8217;application
@@ -210,10 +212,11 @@
                         <script type="text/template">
                             ## Failsafe : le monitoring <!-- .element: style="font-size: 60px" -->
 
-                            Le service ```User``` tombe...
+                            > Le service ```User``` tombe...
 
-                            Oui, je sais. La console viens de l'afficher à l'instant
-                            On redemarre le conteneur V2.3, le service sera UP dans 30s.
+                            * Oui, on a vu. 
+                            * La console ```Sarah Connor``` viens de l&#8217;afficher
+                            * ```Skynet``` redemarre le conteneur T1000-V2.3, le service sera  de nouveau UP dans 30s.
                         </script>
                     </section>
                     <section data-markdown>
