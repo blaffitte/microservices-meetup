@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
 
-        <title>Meet-Up Architecture en &mu;Services</title>
+        <title>Meet-Up Architecture en microservices</title>
 
         <link rel="stylesheet" href="css/reveal.min.css">
-        <link rel="stylesheet" href="css/theme/league.css">
+        <link rel="stylesheet" href="css/theme/white.css">
 
         <!-- Theme used for syntax highlighting of code -->
         <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -20,11 +20,16 @@
             link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
             document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
+        <style type="text/css">
+            .reveal .backgrounds {
+              opacity: 0.25
+            }
+        </style>
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
-                <section>
+                <section data-background-image="image/groupe-catamania.jpg" data-background-size="50%" data-background-position="bottom">
                     <h1>Architecture en MicroServices</h1>
                     <table style="border: none;text-align: center" cellspacing="0" cellpadding="0">
                         <tr style="border: none;text-align: center">
@@ -39,11 +44,11 @@
                     <h2 style="font-size: 60px">Meet Up du 28/06/2016 </h2>
                 </section>
 
-                <section data-markdown>
+                <section data-markdown data-background-image="image/bg-catamania-1.jpg">
                     <script type="text/template">
                         ## Sommaire
 
-                        1. Qu&#8217;est-ce que l&#8217;architecture en MicroServices ?
+                        1. Définition
                         2. Les concepts
                         3. Les bonnes pratiques
                         4. Les plus et les moins
@@ -53,15 +58,14 @@
                         8. Questions/Réponses
                     </script>
                 </section>
-
-                <section>
+                <section data-background-image="image/bg-catamania-2.jpg">
                     <h2>Définition</h2>
                     <section data-markdown>
                         <script type="text/template">
                             ## Qu&#8217;est-ce que l&#8217;architecture en MicroServices ? <!-- .element: style="font-size: 60px" -->
 
                             Réponse : Plein de petits services ! <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
-                            ![Symbol &mu;Service](image/symbol-microservices.png) <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+                            ![Symbol microService](image/symbol-microservices.png) <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
 
                             Euh Non, c&#8217;est un peu plus complexe que ça...  <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
                         </script>
@@ -91,7 +95,6 @@
                             <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="5">Sam Newman</span></td>
                         </tr>
                     </table>
-
                     </section>
                     <section data-markdown>
                         <script type="text/template">
@@ -139,7 +142,7 @@
                         </script>
                     </section>
                 </section>
-                <section>
+                <section data-background-image="image/bg-catamania-3.jpg">
                     <h2>Les Concepts</h2>
                     <section data-markdown>
                         <script type="text/template">
@@ -157,7 +160,7 @@
                         <script type="text/template">
                             ## Design Pilot&eacute; par le Domaine m&eacute;tier <!-- .element: style="font-size: 60px" -->
 
-                            Un &mu;Service ne s&#8217;occupe que d&#8217;un domaine métier et d&#8217;un seul.
+                            Un microservice ne s&#8217;occupe que d&#8217;un domaine métier et d&#8217;un seul.
 
                             Les fonctionnels autour du service doivent-être des spécialistes du domaine.
 
@@ -197,12 +200,12 @@
                         <script type="text/template">
                             ## Failsafe : la tolérance à la panne <!-- .element: style="font-size: 60px" -->
 
-                            > Le service ```User``` tombe... l&#8217;application Gestion des Contrats tombe !
+                            > Le service ```User``` tombe... l&#8217;application ```Gestion des Contrats``` tombe !
 
-                            En &mu;service il ne faut pas que la perte d&#8217;un service bloque le comportement de l&#8217;application.
+                            En microservice il ne faut pas que la perte d&#8217;un service bloque le comportement de l&#8217;application.
 
                             * 1 Cluster par service
-                            * Rédeploiement automatique fiable et rapide
+                            * Redéploiement automatique fiable et rapide
                             * Système de compensation dans l&#8217;application
                             * etc...
 
@@ -231,19 +234,19 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## L&#8217;Outillage <!-- .element: style="font-size: 60px" -->
+                            ## L&#8217;Outillage (1/2)<!-- .element: style="font-size: 60px" -->
 
                             C&#8217;est un mal nécessaire pour l&#8217;avenir.
 
-                            #### Les outils de construction doivent être les mêmes que ceux de production.
+                            #### Les outils de construction doivent être les mêmes que ceux de déploiement.
 
-                            > Le livrable doit être une image de production
+                            > Le livrable doit être iso-production
 
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## L&#8217;Outillage <!-- .element: style="font-size: 60px" -->
+                            ## L&#8217;Outillage (2/2)<!-- .element: style="font-size: 60px" -->
 
                             #### Il faut identifier les outils nécessaire au plus tôt dans la conception du service.
 
@@ -253,7 +256,7 @@
                     </section>
                    <section data-markdown>
                         <script type="text/template">
-                            ## La techno <!-- .element: style="font-size: 60px" -->
+                            ## La techno (1/2)<!-- .element: style="font-size: 60px" -->
 
                             ### Il n&#8217;en à pas une mais des technos !
 
@@ -265,7 +268,7 @@
                     </section>
                    <section data-markdown>
                         <script type="text/template">
-                            ## La techno <!-- .element: style="font-size: 60px" -->
+                            ## La techno (2/2)<!-- .element: style="font-size: 60px" -->
 
                             ### Les couches de communication doivent êtres baser sur des standards
 
@@ -305,7 +308,7 @@
                          </script>
                     </section>
                 </section>
-                <section>
+                <section data-background-image="image/bg-catamania-4.jpg">
                     <h2>Les bonnes pratiques</h2>
                     <section data-markdown>
                         <script type="text/template">
@@ -338,9 +341,9 @@
                         <script type="text/template">
                             ## Gérer les projets et les équipes <!-- .element: style="font-size: 60px" -->
 
-                            Les équipes et les projets de &mu;Service sont elles aussi micro.
+                            Les équipes et les projets de microservice sont elles aussi micro.
 
-                            Chaque équipe est responsable d&#8217;un &mu;Service de bout en bout. De la MOA à la production.
+                            Chaque équipe est responsable d&#8217;un microservice de bout en bout. De la MOA à la production.
                             Une équipe type :
                             * Un fonctionnel Spécialiste du domaine
                             * Un Scrum Master
@@ -353,7 +356,7 @@
                         <script type="text/template">
                             ## Développer un microservice <!-- .element: style="font-size: 60px" -->
 
-                            On fait la part belle au bon usage :
+                            On fait la part belle aux bons usages :
                             * Itération "courte"
                             * TU en Test First
                             * Intégration continue
@@ -400,7 +403,7 @@
                         </script>
                     </section>
                 </section>
-                <section>
+                <section data-background-image="image/bg-catamania-1.jpg">
                     <h2>Les Plus &amp; Les Moins</h2>
                     <section data-markdown>
                         <script type="text/template">
@@ -424,13 +427,14 @@
                             * "Time to Market" réduit
                             * Maîtrise du métier par domaine
                             * Fiabilisation des livrables
-                            * Mise à l&#8217;échelle fine.
-                            * On utilise toujours la meilleur techno possible pour un problème donné.
+                            * Mise à l&#8217;échelle fine
+                            * On utilise toujours la meilleur techno possible pour un problème donné
+                            * Réduit les coûts lié à une dette technique
 
                         </script>
                     </section>
                 </section>
-                <section>
+                <section data-background-image="image/bg-catamania-2.jpg">
                     <h2>Les outils préconisés</h2>
                     <section data-markdown>
                         <script type="text/template">
@@ -454,6 +458,7 @@
                             ![Git](image/git.png) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             ![GitHub](image/github.png) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
                             ![GitLab](image/gitlab.png) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
+
                             ### Intégration Continue
                             ![Jenkins](image/jenkins.png) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             ![Travis CI](image/travis-ci.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
@@ -462,19 +467,16 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            Virtualisation <!-- .element: style="font-size: 25px" -->
-
+                            ### Virtualisation <!-- .element: style="font-size: 25px" -->
                             ![VirtualBox](image/virtualbox.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             ![KVM](image/kvm.jpg) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
                             ![VMWare](image/vmware.png) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
 
-                            Conteneur <!-- .element: style="font-size: 25px" -->
-
+                            ### Conteneur <!-- .element: style="font-size: 25px" -->
                             ![LXC](image/lxc.png) <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
                             ![Kubernetes](image/kubernetes.png) <!-- .element: class="fragment fade-down" data-fragment-index="5" -->
 
-                            Déploiment continue / DevOps <!-- .element: style="font-size: 25px" -->
-
+                            ### Déploiment continue / DevOps <!-- .element: style="font-size: 25px" -->
                             ![Vagrant](image/vagrant.png) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
                             ![Puppets](image/puppets.png) <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
                             ![Docker](image/docker.png) <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
@@ -488,6 +490,7 @@
                             * Netflix APIs (Java, Node, Ruby)
                             * Wildfly Swarm / Spring Boot  (Java)
                             * Seneca (node)
+                            * ...
                         </script>
                     </section>
                     <section data-markdown>
@@ -501,7 +504,7 @@
                         </script>
                     </section>
                 </section>
-                <section>
+                <section data-background-image="image/bg-catamania-3.jpg">
                     <h2>Ahhhh, la démo !</h2>
                     <section data-markdown>
                         <script type="text/template">
@@ -536,12 +539,12 @@
                          </script>
                     </section>
                 </section>
-                <section>
+                <section data-background-image="image/bg-catamania-4.jpg">
                     <h2>Quelques liens...</h2>
                     <section data-markdown>
                         <script type="text/template">
                             ### Articles et tutos
-                            * [Les designs patterns &mu;Service](http://blog.arungupta.me/microservice-design-patterns/)
+                            * [Les designs patterns microservice](http://blog.arungupta.me/microservice-design-patterns/)
                             * [Un tuto Sympa Spring](http://www.kennybastani.com/2015/08/polyglot-persistence-spring-cloud-docker.html)
                             * [Netflix Tech Blog](http://techblog.netflix.com/)
                             * [Microservices with Spring](https://spring.io/blog/2015/07/14/microservices-with-spring)
@@ -565,13 +568,13 @@
                         </script>
                     </section>
                 </section>
-                <section>
+                <section data-background-image="image/bg-catamania-1.jpg">
                     <h2>Et la suite !?</h2>
                     <section data-markdown>
                         <script type="text/template">
                             #  Hackathon Time !!!
 
-                            3 rounds pour le Hackathon &mu;Service : <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
+                            3 rounds pour le Hackathon microservice : <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
                             * Round 0 : L&#8217;inscription ça commence maintenant ! <!-- .element: class="fragment fade-down" data-fragment-index="2" -->
                             * Round 1 : Définition d&#8217;une application et découpage en domaine (collectif) <!-- .element: class="fragment fade-down" data-fragment-index="3" -->
                             * Round 2 : Constitution des équipes et définition des API de chaque domaine (collectif / par équipe) <!-- .element: class="fragment fade-down" data-fragment-index="4" -->
