@@ -33,12 +33,12 @@
                     <h1>Architecture en MicroServices</h1>
                     <table style="border: none;text-align: center" cellspacing="0" cellpadding="0">
                         <tr style="border: none;text-align: center">
-                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="1"><img src="image/benoit.laffitte.jpg" /></span></td>
-                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="2"><img src="image/adrien.vergnaud.jpg" /></span></td>
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="1"><img src="image/adrien.vergnaud.jpg" /></span></td>
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="2"><img src="image/benoit.laffitte.jpg" /></span></td>
                         </tr>
                         <tr style="border: none;text-align: center">
-                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="1">Benoit Laffitte</span></td>
-                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="2">Adrien Vergnaud</span></td>
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="1">Adrien Vergnaud</span></td>
+                            <td style="border: none;text-align: center"><span class="fragment" data-fragment-index="2">Benoit Laffitte</span></td>
                         </tr>
                     </table>
                     <h2 style="font-size: 60px">Meet Up du 28/06/2016 </h2>
@@ -119,6 +119,19 @@
 
                         </script>
                     </section>
+                   <section data-markdown>
+                        <script type="text/template">
+                           ## Aller l'OM ! <!-- .element: style="font-size: 60px" -->
+                           
+                           ![OM](image/droit-au-but.jpg)
+                           
+                           Les microservices vont droit au but :
+                           
+                           * On répond à une problématique métier à la fois
+                           * On adresse le besoin présent
+                           * On gére la montée en charge finement
+                        </script>
+                    </section>
                     <section data-markdown>
                         <script type="text/template">
                             ## Super, mais qui a mis de telles choses en place ?  <!-- .element: style="font-size: 60px" -->
@@ -127,7 +140,6 @@
                             ![Riot Game](image/riot.png) <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
                             ![AirBnB](image/airbnb.jpg) <!-- .element: class="fragment fade-up" data-fragment-index="4" -->
                             ![SoundCloud](image/soundcloud.jpg) <!-- .element: class="fragment fade-up" data-fragment-index="5" -->
-                            ### Et d&#8217;autres... <!-- .element: style="font-size: 40px" class="fragment fade-up" data-fragment-index="6" -->
                         </script>
                     </section>
                     <section data-markdown>
@@ -172,6 +184,15 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
+                            ## On gère le besoin, mais pas plus ! <!-- .element: style="font-size: 60px" -->
+                            Inutile de prévoir l&#8217;avenir sur le long terme.
+                            
+                            Les services se construisent suivant le besoin du moment.
+                            Il sera toujours temps de monter en version le moment venu.
+                       </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
                             ## La gestion des données : changer ses habitudes <!-- .element: style="font-size: 60px" -->
 
                             * Fini les grosses bases relationnelles (ou presque).
@@ -198,7 +219,7 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Failsafe : la tolérance à la panne <!-- .element: style="font-size: 60px" -->
+                            ## Failsafe (1/2) : la tolérance à la panne <!-- .element: style="font-size: 60px" -->
 
                             > Le service ```User``` tombe... l&#8217;application ```Gestion des Contrats``` tombe !
 
@@ -213,7 +234,7 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Failsafe : le monitoring <!-- .element: style="font-size: 60px" -->
+                            ## Failsafe (2/2) : le monitoring <!-- .element: style="font-size: 60px" -->
 
                             > Le service ```User``` tombe...
 
@@ -224,12 +245,21 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Le coté "composant" <!-- .element: style="font-size: 60px" -->
+                            ## Le coté "composant" (1/2) <!-- .element: style="font-size: 60px" -->
 
                             Un peu comme dans un client lourd il doit être (dans la mesure du possible) :
                             * Réutilisable 
                             * Rétro-compatible
                             * Mais aussi interchangeable
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Le coté "composant" (2/2) <!-- .element: style="font-size: 60px" -->
+
+                            Plus on respecte les standards du web à la lettre, plus le services sera flexible et interchangeable :
+                            * HTTP / REST
+                            * HATEOAS (Hypermedia)
                         </script>
                     </section>
                     <section data-markdown>
@@ -339,11 +369,14 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Gérer les projets et les équipes <!-- .element: style="font-size: 60px" -->
+                            ## Gérer les équipes <!-- .element: style="font-size: 60px" -->
 
-                            Les équipes et les projets de microservice sont elles aussi micro.
+                            Les équipes microservice sont elles aussi micro.
 
-                            Chaque équipe est responsable d&#8217;un microservice de bout en bout. De la MOA à la production.
+                            Chaque équipe est responsable d&#8217;un microservice de bout en bout. 
+                            
+                            De la MOA à la production.
+                            
                             Une équipe type :
                             * Un fonctionnel Spécialiste du domaine
                             * Un Scrum Master
@@ -354,7 +387,20 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Développer un microservice <!-- .element: style="font-size: 60px" -->
+                            ## Gérer les projets <!-- .element: style="font-size: 60px" -->
+                            
+                            Les projets sont aussi plus petit, mais pas moins ambitieux.
+                            Chaque projets doit :
+                            * Apporter une valeur ajoutée immédiate
+                            * Répondre au besoin métier essentiel
+                            * Maintenir la pérénité de l'ensemble
+                            
+                            Le projet est orienté qualité, plus de quantité.(Less is More)
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Développer un microservice (1/2)<!-- .element: style="font-size: 60px" -->
 
                             On fait la part belle aux bons usages :
                             * Itération "courte"
@@ -365,6 +411,18 @@
                             * Versionning et Compatibilité des APIs (SemVer)
                         </script>
                     </section>
+                   <section data-markdown>
+                        <script type="text/template">
+                            ## Développer un microservice (2/2) <!-- .element: style="font-size: 60px" -->
+                            
+                            Le code doit être le plus simple et le plus proche du métier possible.
+                            
+                            * On évite les surcouches d'accés aux données
+                            * On évite les abstracts 
+                            * On préféras les mixins
+                           
+                        </script>
+                    </section>                    
                     <section data-markdown>
                         <script type="text/template">
                             ### Livrer un microservice (1/3) <!-- .element: style="font-size: 40px" -->
