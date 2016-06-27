@@ -152,26 +152,28 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Design Pilot&eacute; par le Domaine m&eacute;tier <!-- .element: style="font-size: 60px" -->
-                            (DPD ou DDD : Domain Driven Design)
+                            (Approche DDD : Domain Driven Design)
 
                             Un &mu;Service ne s&#8217;occupe que d&#8217;un domaine métier et d&#8217;un seul.
+                            Les fonctionnels autour du service doivent-être des spécialistes du domaine.
 
-                            Exemple :
-                            > Un service gérant des contrats ne s&#8217;occupe que des contrats et non des adhérents au contrat.
-                            > c&#8217;est un autre service lui même différent de celui qui gère les sociétaires
+                            > Un service gérant des contrats ne s&#8217;occupe que des contrats.
+                            > Pas des adhérents lié au contrat. C&#8217;est un autre service qui s'en occupera.
+
                        </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
                             ## La gestion des données : changer ses habitudes <!-- .element: style="font-size: 60px" -->
 
-                            * Fini les grosses base relationnelles (ou presque)
-                            * La part belle aux bases aux bases NoSQL ou relationnelles objet.
-                            * Repenser la transaction pour s&#8217;en passer
+                            * Fini les grosses base relationnelles (ou presque).
+                            * La part belle aux bases aux bases NoSQL.
+                            * Repenser la transaction pour s&#8217;en passer le plus possible.
                             * Accepter de ne pas avoir des données valides et savoir les gérer.
 
                             #### Les données sont privées !!!
 
+                            LSes données sont privées et accessibles uniquement depuis l&#8217;API exposée
                         </script>
                     </section>
                     <section data-markdown>
@@ -179,7 +181,6 @@
                             ## Autonomie &amp; Isolation <!-- .element: style="font-size: 60px" -->
 
                             * Il ne dépend pas d&#8217;autres services pour être déployé.
-                            * Ses données sont privées et accessibles uniquement depuis l&#8217;API
                             * Les montées de version doivent être possibles à tout moment
                             * Il doit pouvoir être distribué différement des autres services
 
@@ -196,9 +197,19 @@
                             Solutions possible :
                             * 1 Cluster par service
                             * Rédeploiement automatique fiable et rapide
-                            * Système de compensation dans l&#8217;application (do and post later)
+                            * Système de compensation dans l&#8217;application
                             * etc...
 
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Failsafe : le monitoring <!-- .element: style="font-size: 60px" -->
+
+                            Le service ```User``` tombe...
+
+                            Oui, je sais. La console viens de l'afficher à l'instant
+                            On redemarre le conteneur V2.3, le service sera UP dans 30s.
                         </script>
                     </section>
                     <section data-markdown>
@@ -219,7 +230,7 @@
 
                             #### Les outils de construction doivent être les mêmes que ceux de production.
 
-                            > le livrable doit être une image ISO production au delta du clustering
+                            > le livrable doit être une image de production
 
                         </script>
                     </section>
