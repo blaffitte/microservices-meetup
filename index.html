@@ -83,7 +83,7 @@
                     </section>
                     <section >
                         <h4>Est-ce du SOA ?</h4>
-                        <span class="fragment fade-up" data-fragment-index="1">OUI et NON, tout dépends comment on définit SOA.</span>
+                        <span class="fragment fade-up" data-fragment-index="1">OUI et NON, tout dépend comment on définit SOA.</span>
                         <h4 class="fragment fade-up" data-fragment-index="2">L&#8217;évangile selon ?</h4>
                         <table style="border: none;text-align: center" cellspacing="0" cellpadding="0" class="fragment fade-up" data-fragment-index="2">
                         <tr style="border: none;text-align: center">
@@ -114,7 +114,7 @@
                             ## "En français on dit guinche"  <!-- .element: style="font-size: 60px" -->
                             (I'AM - je danse le MIA) <!-- .element: style="font-size: 15px" -->
                             > En bref, le style architectural de Microservice est une approche de conception d&#8217;une application comme une suite de petits services, chacun fonctionnant dans son propre processus et communiquant avec des mécanismes légers, souvent une API REST sur HTTP.
-                            > Ces services sont construits autour de domaine métier et sont indépendamment déployable par usines de déploiement entièrement automatisé.
+                            > Ces services sont construits autour de domaine métier et sont indépendamment déployable par usines de déploiement entièrement automatisées.
                             > Il y a un minimum de gestion centralisée de ces services, ces derniers peuvent être écrits dans différents langages de programmation et peuvent utiliser différentes technologies de stockage de données. <!-- .element: style="font-size: 20px" class="fragment fade-down" data-fragment-index="1" -->
 
                             James Lewis / Martin Fowler <!-- .element: class="fragment fade-down" data-fragment-index="1" -->
@@ -124,11 +124,11 @@
                    <section data-markdown>
                         <script type="text/template">
                            ## Aller l'OM ! <!-- .element: style="font-size: 60px" -->
-                           
+
                            ![OM](image/droit-au-but.jpg)
-                           
+
                            Les microservices vont droit au but :
-                           
+
                            * On répond à une problématique métier à la fois
                            * On adresse le besoin présent
                            * On gére la montée en charge finement
@@ -136,7 +136,7 @@
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Super, mais qui a mis de telles choses en place ?  <!-- .element: style="font-size: 60px" -->
+                            ## Super! mais qui a mis de telles choses en place ?  <!-- .element: style="font-size: 60px" -->
                             ![Netflix](image/netflix.png) <!-- .element: class="fragment fade-up" data-fragment-index="1" -->
                             ![Uber](image/uber.png) <!-- .element: class="fragment fade-up" data-fragment-index="2" -->
                             ![Riot Game](image/riot.png) <!-- .element: class="fragment fade-up" data-fragment-index="3" -->
@@ -163,10 +163,10 @@
                             ## Qu&#8217;est-ce qui définit un MicroService ? <!-- .element: style="font-size: 60px" -->
                             * Son design
                             * Ses données
-                            * Son isolation 
+                            * Son isolation
                             * Son autonomie
-                            * Sa tolérence à la panne
-                            * Assimilable à un composants
+                            * Sa tolérance à la panne
+                            * Assimilable à un composant
                             * Son outillage, sa techno
                         </script>
                     </section>
@@ -179,7 +179,7 @@
                             Les fonctionnels autour du service doivent-être des spécialistes du domaine.
 
                             > Un service gérant des contrats ne s&#8217;occupe que des contrats.
-                            > Pas des adhérents lié au contrat. C&#8217;est un autre service qui s'en occupera.
+                            > Pas des adhérents liés au contrat. C&#8217;est un autre service qui s'en occupera.
 
                             Approche DDD (Domain Driven Design) conseillée.
                        </script>
@@ -188,7 +188,7 @@
                         <script type="text/template">
                             ## On gère le besoin, mais pas plus ! <!-- .element: style="font-size: 60px" -->
                             Inutile de prévoir l&#8217;avenir sur le long terme.
-                            
+
                             Les services se construisent suivant le besoin du moment.
                             Il sera toujours temps de monter en version le moment venu.
                        </script>
@@ -198,15 +198,15 @@
                             ## La gestion des données : changer ses habitudes <!-- .element: style="font-size: 60px" -->
 
                             * Fini les grosses bases relationnelles (ou presque).
-                            * La part belle aux bases aux bases NoSQL.
+                            * La part belle aux bases NoSQL.
                             * Repenser la transaction pour s&#8217;en passer (le plus possible).
                        </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Les données sont privées !!! <!-- .element: style="font-size: 60px" -->
+                            ## Touche pas à ma Data !!! <!-- .element: style="font-size: 60px" -->
 
-                            Elles appartiennent au service et sont accessibles uniquement depuis l&#8217;API exposée.
+                            Les données appartiennent au service et ne sont accessibles que depuis l&#8217;API exposée.
                         </script>
                     </section>
                     <section data-markdown>
@@ -226,16 +226,14 @@
                             > Le service ```User``` tombe... l&#8217;application ```Gestion des Contrats``` ne tombe pas !
 
                             En microservice il ne faut pas que la perte d&#8217;un service bloque le comportement de l&#8217;application.
-
-
                         </script>
                     </section>
                    <section data-markdown>
                         <script type="text/template">
                             ## Failsafe (2/3) : la tolérance à la panne <!-- .element: style="font-size: 60px" -->
-                            
+
                             Stratégies possibles :
-                            * 1 Cluster par service
+                            * Un cluster par service
                             * Redéploiement automatique fiable et rapide
                             * Système de compensation dans l&#8217;application
                             * etc...
@@ -248,17 +246,17 @@
 
                             > Le service ```User``` tombe...
 
-                            * Oui, on a vu. 
+                            * Oui, on a vu.
                             * La console ```Sarah Connor``` viens de l&#8217;afficher
-                            * ```Skynet``` redemarre le conteneur T1000-V2.3, le service sera  de nouveau UP dans 30s.
+                            * ```Skynet``` redémarre le conteneur T1000-V2.3, le service sera  de nouveau UP dans 30s.
                         </script>
                     </section>
                     <section data-markdown>
                         <script type="text/template">
                             ## Le coté "composant" (1/2) <!-- .element: style="font-size: 60px" -->
 
-                            Un peu comme dans un client lourd il doit être (dans la mesure du possible) :
-                            * Réutilisable 
+                            Un peu comme un composant graphique, il doit être :
+                            * Réutilisable
                             * Rétro-compatible
                             * Mais aussi interchangeable
                         </script>
@@ -267,7 +265,7 @@
                         <script type="text/template">
                             ## Le coté "composant" (2/2) <!-- .element: style="font-size: 60px" -->
 
-                            Plus on respecte les standards du web à la lettre, plus le services sera flexible et interchangeable :
+                            Plus on respecte les standards du web à la lettre, plus le service sera flexible et interchangeable :
                             * HTTP / REST
                             * HATEOAS (Hypermedia)
                         </script>
@@ -288,7 +286,7 @@
                         <script type="text/template">
                             ## L&#8217;Outillage (2/2)<!-- .element: style="font-size: 60px" -->
 
-                            #### Il faut identifier les outils nécessaire au plus tôt dans la conception du service.
+                            #### Il faut identifier les outils nécessaires au plus tôt dans la conception du service.
 
                             > Plus on anticipe les travaux de production, plus simple sera l&#8217;exploitation du service
 
@@ -298,9 +296,9 @@
                         <script type="text/template">
                             ## La techno (1/2)<!-- .element: style="font-size: 60px" -->
 
-                            ### Il n&#8217;en à pas une mais des technos !
+                            ### Il n&#8217;y en à pas une, mais des technos !
 
-                            > Il faut utiliser la meilleure techno pour le METIER géré.
+                            > Il faut utiliser la meilleure techno pour le BESOIN géré.
 
                             ### Une bonne techno est la techno qui sert le mieux son besoin !
 
@@ -310,12 +308,12 @@
                         <script type="text/template">
                             ## La techno (2/2)<!-- .element: style="font-size: 60px" -->
 
-                            ### Les couches de communication doivent êtres baser sur des standards
+                            ### Les couches de communication doivent être basées sur des standards
 
                             REST est préconisé, mais ne doit pas fermer la porte à SOAP.
-                            
-                            > On peut exposer un même service sous plusieures formes.
-                            
+
+                            > On peut exposer un même service sous plusieurs formes.
+
                             L&#8217;important est d&#8217;être dans les standards.
                         </script>
                     </section>
@@ -352,12 +350,12 @@
                     <h2>Les bonnes pratiques</h2>
                     <section data-markdown>
                         <script type="text/template">
-                            ### Getting Start...
-                            
+                            ### Getting Start
+
                             Une première approche est de partir d&#8217;un monolith et d&#8217;en faire des microservices.
-                            
+
                             Partir directement en microservice n&#8217;est pas conseillé.
-                            
+
                             Pas sans une maturité sur ce style d&#8217;architecture ET le métier.
                         </script>
                     </section>
@@ -383,10 +381,10 @@
 
                             Les équipes microservice sont elles aussi micro.
 
-                            Chaque équipe est responsable d&#8217;un microservice de bout en bout. 
-                            
+                            Chaque équipe est responsable d&#8217;un microservice de bout en bout.
+
                             De la MOA à la production.
-                            
+
                             Une équipe type :
                             * Un fonctionnel Spécialiste du domaine
                             * Un Scrum Master
@@ -398,14 +396,14 @@
                     <section data-markdown>
                         <script type="text/template">
                             ## Gérer les projets <!-- .element: style="font-size: 60px" -->
-                            
+
                             Les projets sont aussi plus petit, mais pas moins ambitieux.
-                            Chaque projets doit :
+                            Chaque projet doit :
                             * Apporter une valeur ajoutée immédiate
-                            * Répondre au besoin métier essentiel
+                            * Répondre aux besoins métiers essentiels
                             * Maintenir la pérénité de l'ensemble
-                            
-                            Le projet est orienté qualité, plus de quantité.(Less is More)
+
+                            Le projet est orienté qualité, plus que quantité.(Less is More)
                         </script>
                     </section>
                     <section data-markdown>
@@ -424,15 +422,15 @@
                    <section data-markdown>
                         <script type="text/template">
                             ## Développer un microservice (2/2) <!-- .element: style="font-size: 60px" -->
-                            
+
                             Le code doit être le plus simple et le plus proche du métier possible.
-                            
+
                             * On évite les surcouches d'accés aux données
-                            * On évite les abstracts 
-                            * On préféras les mixins
-                           
+                            * On évite les abstracts
+                            * On préférera les mixins
+
                         </script>
-                    </section>                    
+                    </section>
                     <section data-markdown>
                         <script type="text/template">
                             ### Livrer un microservice (1/3) <!-- .element: style="font-size: 40px" -->
@@ -467,7 +465,7 @@
                             * RE7 Interne,
                             * RE7 Utilisateur,
                             * RE7 d&#8217;exploitation
-                           
+
                         </script>
                     </section>
                 </section>
@@ -497,7 +495,7 @@
                             * Fiabilisation des livrables
                             * Mise à l&#8217;échelle fine
                             * On utilise toujours la meilleur techno possible pour un problème donné
-                            * Réduit les coûts lié à une dette technique
+                            * Réduit les coûts liés à une dette technique
 
                         </script>
                     </section>
@@ -624,7 +622,7 @@
                             * [Principles Of Microservices by Sam Newman](https://youtu.be/PFQnNFe27kU?list=PLbPMIlZ-9A46C497Bj0NQluBxsRQ5EIyZ)
                             * [James Lewis - Microservices: Adaptive Systems for Innovative Organizations](https://youtu.be/GDVcUM5wbxU?list=PLbPMIlZ-9A46C497Bj0NQluBxsRQ5EIyZ)
                             * [Microservices - Martin Fowler](https://youtu.be/wgdBVIX9ifA?list=PLbPMIlZ-9A46C497Bj0NQluBxsRQ5EIyZ)
-                            
+
                             [Playlist autour des Microservices](https://www.youtube.com/playlist?list=PLbPMIlZ-9A46C497Bj0NQluBxsRQ5EIyZ)
                         </script>
                     </section>
