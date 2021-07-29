@@ -2,7 +2,7 @@
 
 Fait en Reveal.js.
 
-TEST TGIT-4
+TEST TGIT-4 #en-cours
 
 Voici la documentation de reveal.js :
 ## reveal.js
