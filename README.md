@@ -2,7 +2,7 @@
 
 Fait en Reveal.js.
 
-TEST TGIT-4 #en-cours
+TEST Github integration for Jira
 
 Voici la documentation de reveal.js :
 ## reveal.js
